@@ -1,0 +1,74 @@
+<div class="old">
+    <div layout="row">
+        <div flex="70">
+            <h1>{{data.name}}</h1>
+            <h2>{{data.title}}</h2>
+            <p>{{data.prompt}}</p>
+        </div>
+        <div flex="30">
+            <img ng-src="{{data.avatar}}"/>
+        </div>
+    </div>
+
+    <section class="info">
+        <h3>Contacts</h3>
+        <div ng-repeat="info in data.contacts">
+            <dt>{{info.title}}</dt><dd>{{info.value}}</dd>
+        </div>
+    </section>
+    <div style="clear:both"></div>
+    <section >
+        <h3>Personal Information</h3>
+        <a ng-repeat="info in data.info"  ng-href="{{info.href}}">
+            <dt>{{info.dt}}</dt>
+            <dd ng-bind="info.value"></dd>
+        </a>
+    </section>
+
+    <section>
+        <h1>Education</h1>
+        <ul ng-repeat="job in edus" layout="row" class="job">
+
+            <li>{{job.company}} / {{job.title}}
+                        <span class="period">
+                            <time datetime="{{job.begin}}">{{job.begin.getFullYear()}}</time>
+                            <span ng-if="job.begin.getFullYear() != job.end.getFullYear()"> -
+                                <time datetime="{{job.end}}">{{job.end.getFullYear()}}</time>
+                            </span>
+                        </span>
+                <br/>{{job.job_description}}
+            </li>
+
+        </ul>
+    </section>
+
+    <div style="display: none"> English:	advanced (participated in youth exchange programs, AIESEC, EVS, Work and Travel USA)
+        Russian	native
+
+        Front-end Development	Experienced in HTML5, cross-browser compatible CSS , LESS , Javascript.
+        jQuery and AngularJS.
+        frameworks:  SVG (RaphaelJS), Canvas (EaselJS, KineticJS, FabricJS), WebGL (ThreeJS).
+
+        Back-End Development	PHP, NodeJS.
+        Some experience with MEAN stack, SailsJS , Angular-Meteor.
+
+        Software Development	Qt (Cross platform development for PC, Android and iOS)
+        С++, Java, OpenGL
+        related skills	Photoshop, Corel Draw</div>
+
+    <section id="skills">
+        <h3>Core Skills</h3>
+        <p>
+            My strongest skills are <b>HTML5</b>, <b>CSS3</b> and <b>javascript</b>. I prefer to use <b>AngularJS</b>, <b>LESS</b> and <b>MongoDB</b>/<b>NodeJS</b> or frameworks like <b>Angular-Meteor</b> in my applications.
+        </p>
+
+        <p>
+            I worked a lot with enchanced HTML5 graphics (presentations, schemes, charts etc). I used <b>RaphaelJS</b> for SVG; <b>EaselJS</b>, <b>KineticJS</b>, <b>FabricJS</b> for CANVAS; <b>ThreeJS</b> for WebGL.
+        </p>
+        <p>
+            I developed cross-browser and cross-platform web applications, with modern features and and polyfills for old and mobile browsers (Android, iOS, IE8). Expirienced with creating mobile apps packaged through <b>PhoneGap</b>.</p>
+
+        <h1>Other Skills</h1>
+        <p>Before i set priority on Web FrontEnd i mostly worked on <b>Qt</b>. Created Linux/Windows/Android applications. Finished different programming courses.</p>
+    </section>
+</div>

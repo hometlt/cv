@@ -1,0 +1,41 @@
+<div  id="portfolio" class="modern layout layout-row">
+
+    <header class="flex flex-5">
+        <div class="rotated">
+            <h1>{{data.name}} <span>/ {{data.title}}</span></h1>
+        </div>
+    </header>
+    <main>
+        <h1>{{'portfolio'|translate}}<span class="notice">{{'more'|translate}}<i class="fa fa-github-square"></i><i class="fa fa-linkedin-square"></i></span></h1>
+
+        <div ng-repeat="work in data.works" class="work layout layout-row" ng-class="{active: !work.end}">
+
+            <div>
+                <h2>
+                    {{work.title}}
+                </h2>
+                <h3>{{work.company}} <span ng-if="work.company && work.begin">/</span>
+                        <span class="period">
+                            <time datetime="{{work.begin}}">{{work.begin.getFullYear()}}</time>
+                            <span ng-if="work.end && work.begin.getFullYear() != work.end.getFullYear()"> -
+                                <time datetime="{{work.end}}">{{work.end.getFullYear()}}</time>
+                            </span>
+                             <span ng-if="!work.end"> -
+                                today
+                            </span>
+                        </span>
+                </h3>
+
+                <p>{{work.description}}</p>
+                <div class="images">
+                    <img ng-repeat="img in work.images" ng-src="portfolio/{{img}}">
+                </div>
+            </div>
+
+            <div class="icons-small">
+                <i ng-repeat="skill in work.skills" class="fa {{skill}} small"></i>
+            </div>
+        </div>
+
+    </main>
+</div>

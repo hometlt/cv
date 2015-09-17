@@ -1,0 +1,437 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+html,
+body {
+  margin: 0;
+  text-align: center;
+}
+@media print {
+  .lang {
+    display: none;
+  }
+  article {
+    margin: 0 0 -0.25mm 0 !important;
+  }
+}
+@media screen {
+  article {
+    margin: 20px auto;
+    box-shadow: 1px 1px 9px 3px;
+  }
+}
+.lang {
+  z-index: 9999;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.lang #english {
+  background-image: url(eng.png);
+  background-size: 100%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.lang #russian {
+  background-image: url(rus.png);
+  background-size: 100%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+section {
+  clear: both;
+}
+article {
+  position: relative;
+  box-sizing: border-box;
+  height: 297mm;
+  width: 210mm;
+  page-break-after: avoid;
+  /*page-break-before: avoid;*/
+  /*page-break-inside: avoid;*/
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+}
+* {
+  -webkit-print-color-adjust: exact;
+}
+.old {
+  padding: 15mm 15mm 15mm 25mm;
+}
+.old dt {
+  float: left;
+  width: 105px;
+}
+.old dt:after {
+  content: ":";
+}
+.old .info {
+  clear: both;
+}
+.old .info > div {
+  float: left;
+  width: 50%;
+}
+.modern {
+  text-align: left;
+  font-size: 12px;
+  height: 100%;
+}
+.modern h1 {
+  text-align: left;
+  color: #00BF67;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 7px;
+}
+.modern main {
+  padding: 20px 30px 20px 20px;
+}
+.modern main .period {
+  font-style: italic;
+  color: #80B5C1;
+  margin-top: 4px;
+  display: inline-block;
+}
+.modern main h2 {
+  font-size: 15px;
+  margin: 0;
+}
+.modern main a {
+  font-size: 10px;
+  display: block;
+}
+.modern main .job {
+  margin-bottom: 20px;
+  position: relative;
+}
+.modern main .job a {
+  text-decoration: none;
+  color: black;
+}
+.modern main .job p {
+  margin: 0;
+}
+.modern main .job > div:nth-child(2) {
+  padding-left: 10px;
+}
+.modern main .job > div:first-of-type {
+  position: relative;
+}
+.modern main .job > div:first-of-type:after {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: grey;
+  content: "\f111";
+  font: normal normal normal 14px/1 FontAwesome;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  line-height: 13px;
+}
+.modern main .job > div:first-of-type:before {
+  content: "";
+  width: 1px;
+  top: -3px;
+  bottom: -17px;
+  right: 8px;
+  border-radius: 10px;
+  background-color: #00BF67;
+  position: absolute;
+}
+.modern main .job.active > div:first-of-type:after {
+  color: #00BF67;
+}
+.modern main .job:last-of-type > div:first-of-type:before {
+  bottom: -2px;
+}
+.modern .icons {
+  text-align: center;
+}
+.modern .icons > span {
+  width: 62px;
+  display: inline-block;
+  margin: 0 2px;
+}
+.modern .icons i.fa {
+  background-size: 44px;
+  background-position: 50%;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #00dd56;
+  border-radius: 30px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+}
+.modern .icons-small {
+  display: none;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  top: 100%;
+  margin-top: -5px;
+}
+.modern .icons-small i.fa {
+  margin: 2px;
+  display: inline-block;
+  background-size: 16px;
+  background-position: 50%;
+  overflow: hidden;
+  width: 22px;
+  height: 22px;
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.modern i.fa {
+  background-size: 16px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.modern i.fa.phonegap {
+  background-image: url(images/phonegap.png);
+}
+.modern i.fa.angular {
+  background-image: url(images/angular.small.png);
+}
+.modern i.fa.photoshop {
+  background-image: url(images/photoshop.png);
+}
+.modern i.fa.html5 {
+  background-image: url(images/html5.small.png);
+}
+.modern i.fa.svg {
+  background-image: url(images/svg-logo.svg);
+  background-size: 40px;
+  background-position: 10px;
+}
+.modern i.fa.svg.small {
+  background-image: url(images/svg-logo.svg);
+  background-size: 16px;
+  background-position: 2px;
+}
+.modern i.fa.css3 {
+  background-image: url(images/css3.small.png);
+}
+.modern i.fa.canvas {
+  background-image: url(images/canvas.small.png);
+  background-size: 67%;
+  background-position: 50%;
+}
+.modern i.fa.umi.small {
+  background-image: url(images/umi.small.png);
+}
+.modern i.fa.cpp {
+  background-image: url(images/cpp.png);
+  background-size: 90%;
+}
+.modern i.fa.qt.small {
+  background-image: url(images/qt.png);
+  background-size: 16px;
+  background-position: 2px;
+}
+.modern i.fa.nodejs {
+  background-image: url(images/nodejs.small.png);
+}
+.modern i.fa.qt {
+  background-image: url(images/qt.png);
+  background-size: 40px;
+  background-position: 10px;
+}
+.modern i.fa.java {
+  background-image: url(images/java.small.png);
+}
+.modern i.fa.opengl {
+  background-image: url(images/opengl.png);
+  background-size: 95%;
+  background-position: 50%;
+}
+.modern i.fa.mysql {
+  background-image: url(images/mysql.png);
+}
+.modern i.fa.php {
+  background-image: url(images/php.small.svg);
+  background-size: 90%;
+  background-position: 50%;
+}
+.modern i.fa.fire {
+  background-image: url(images/fire.png);
+}
+.modern i.fa.volunteer {
+  background-image: url(images/volunteer.png);
+}
+.modern i.fa.webgl {
+  background-image: url(images/WebGL.png);
+  background-size: 70px;
+  background-position: -5px;
+}
+.modern header {
+  background-color: grey;
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/cubes.png);
+  padding: 30px;
+}
+.modern header .avatar {
+  margin: auto;
+  display: block;
+}
+.modern header h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.modern header h2 {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 0;
+}
+.modern header ul {
+  list-style: none;
+  padding: 0;
+}
+.modern header a {
+  color: black;
+  text-decoration: none;
+}
+.modern header dt {
+  float: left;
+  font-weight: 600;
+  padding-right: 3px;
+}
+.modern header dt i.fa {
+  width: 20px;
+  text-align: center;
+  height: 16px;
+}
+.modern header dd {
+  text-align: left;
+  -webkit-margin-start: 30px;
+  min-height: 17px;
+  margin-bottom: 5px;
+}
+.modern header h3 {
+  text-align: center;
+  position: relative;
+}
+.modern header h3:before,
+.modern header h3:after {
+  content: "";
+  height: 1px;
+  background-color: grey;
+  width: 70px;
+  position: absolute;
+  margin-top: -1px;
+  top: 50%;
+}
+.modern header h3:before {
+  left: 0;
+}
+.modern header h3:after {
+  right: 0;
+}
+.modern .notice {
+  float: right;
+  color: black;
+  font-size: 0.6em;
+  line-height: 30px;
+  text-transform: none;
+}
+.modern .notice i.fa {
+  margin-left: 5px;
+  font-size: 1.5em;
+}
+.modern#portfolio .icons-small {
+  right: 20px;
+  top: 0;
+}
+.modern#portfolio header {
+  padding: 15px;
+}
+.modern#portfolio header > .rotated {
+  transform: rotate(90deg) translate(0, -100%);
+  transform-origin: left top 0;
+  white-space: nowrap;
+  margin: -9px;
+}
+.modern#portfolio header > .rotated span {
+  color: black;
+  font-size: 0.8em;
+}
+.modern#portfolio .work {
+  float: left;
+  width: 50%;
+  padding: 0 20px 10px 0;
+  position: relative;
+}
+.modern#portfolio .work h3 {
+  margin: 0;
+  font-size: 12px;
+  margin-top: -4px;
+}
+.modern#portfolio .work .images img {
+  margin-right: 5px;
+  max-height: 100px;
+}
+button,
+select,
+html,
+textarea,
+input {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.flex {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.layout {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.layout-row {
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+.flex-35 {
+  -webkit-flex: 0 0 35%;
+  -ms-flex: 0 0 35%;
+  flex: 0 0 35%;
+}
+.layout-row > .flex-35 {
+  max-width: 35%;
+}
+.flex-25 {
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+}
+.layout-row > .flex-25 {
+  max-width: 25%;
+}
+.flex-5 {
+  -webkit-flex: 0 0 5%;
+  -ms-flex: 0 0 5%;
+  flex: 0 0 5%;
+}
+.layout-row > .flex-5 {
+  max-width: 5%;
+}
