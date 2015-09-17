@@ -28,14 +28,14 @@ body {
   top: 0;
 }
 .lang #english {
-  background-image: url(eng.png);
+  background-image: url(images/eng.png);
   background-size: 100%;
   display: inline-block;
   width: 40px;
   height: 40px;
 }
 .lang #russian {
-  background-image: url(rus.png);
+  background-image: url(images/rus.png);
   background-size: 100%;
   display: inline-block;
   width: 40px;
@@ -271,6 +271,9 @@ article {
 }
 .modern i.fa.fire {
   background-image: url(images/fire.png);
+}
+.modern i.fa.smoke {
+  background-image: url(images/smoke.png);
 }
 .modern i.fa.volunteer {
   background-image: url(images/volunteer.png);

@@ -69,6 +69,9 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                     },
                     fire: {
                         value: "Люблю велосипед и скалолазание. Выступаю с группой огненного шоу."
+                    },
+                    smoke: {
+                        value: "Не курю."
                     }
                 },
                 jobs: {
@@ -212,6 +215,10 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                     fire: {
                         icon: "fire",
                         value: "I like Cycling and climbing. As a member of trickers group I perform with fire-show."
+                    },
+                    smoke: {
+                        icon: "smoke",
+                        value: "Dont smoking."
                     }
                 },
                 strong: {
