@@ -19,14 +19,21 @@
 </head>
 <body ng-controller="ctrl">
     <div class="lang">
-        <a href="#" ng-click="setLang('en_US')" id="english"></a>
-        <a href="#" ng-click="setLang('ru_RU')" id="russian"></a>
+        <a href="#" ng-if="lang == 'en_US'" ng-click="setLang('ru_RU')" id="english"></a>
+        <a href="#" ng-if="lang == 'ru_RU'" ng-click="setLang('en_US')" id="russian"></a>
     </div>
 
-    <article ng-include="'templates/modern.html'"></article>
 
-    <article ng-include="'templates/portfolio.html'"></article>
+    <div class="container" >
+        <article ng-include="'templates/modern.html'"></article>
+    </div>
 
-    <!--<article ng-include="'templates/old.html'"></article>-->
+    <div class="container">
+        <article ng-include="'templates/portfolio.html'"></article>
+    </div>
+
+    <div class="container">
+        <article ng-include="'templates/old.html'"></article>
+    </div>
 </body>
 </html>

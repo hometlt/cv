@@ -1,0 +1,20 @@
+<h1>{{'education'|translate}}</h1>
+<div ng-repeat="job in data.edus" class="job layout layout-row">
+    <div class="flex flex-25">
+        <h2> {{job.company}}</h2>
+        <a ng-href="{{job.href}}">{{job.href_title}}</a>
+                        <span class="period">
+                            <time datetime="{{job.begin}}">{{job.begin.getFullYear()}}</time>
+                            <span ng-if="job.begin.getFullYear() != job.end.getFullYear()"> -
+                                <time datetime="{{job.end}}">{{job.end.getFullYear()}}</time>
+                            </span>
+                        </span>
+    </div>
+    <div>
+        <h2>{{job.title}}</h2>
+        <p>{{job.job_description}}</p>
+    </div>
+    <div class="icons-small">
+        <i ng-repeat="skill in job.skills" class="fa {{skill}} small"></i>
+    </div>
+</div>

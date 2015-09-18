@@ -1,3 +1,4 @@
+
 <div  id="portfolio" class="modern layout layout-row">
 
     <header class="flex flex-5">
@@ -8,7 +9,7 @@
     <main>
         <h1>{{'portfolio'|translate}}<span class="notice">{{'more'|translate}}<i class="fa fa-github-square"></i><i class="fa fa-linkedin-square"></i></span></h1>
 
-        <div ng-repeat="work in data.works" class="work layout layout-row" ng-class="{active: !work.end}">
+        <div ng-repeat="work in data.works" class="work layout layout-row" ng-class="{active: !work.end}" ng-hide="work.hide">
 
             <div>
                 <h2>

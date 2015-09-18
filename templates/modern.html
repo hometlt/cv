@@ -1,4 +1,5 @@
-<div class="modern layout layout-row" >
+
+    <div class="modern layout layout-row" >
 
 <header class="flex flex-35">
     <svg class="avatar" width="180" height="200" viewBox="0 0 560 645" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -64,55 +65,8 @@
 
 </header>
 <main>
-    <section>
-        <h1>{{'expirience'|translate}}</h1>
-
-        <div ng-repeat="job in data.jobs"   class="job layout layout-row" ng-class="{active: !job.end}" ng-hide="job.hide">
-            <div class="flex flex-25">
-                <h2> {{job.company}}</h2>
-                <a ng-href="{{job.href}}">{{job.href_title}}</a>
-                        <span class="period">
-                            <time datetime="{{job.begin}}">{{job.begin.getFullYear()}}</time>
-                            <span ng-if="job.end && job.begin.getFullYear() != job.end.getFullYear()"> -
-                                <time datetime="{{job.end}}">{{job.end.getFullYear()}}</time>
-                            </span>
-                             <span ng-if="!job.end"> -
-                                today
-                            </span>
-                        </span>
-            </div>
-            <div>
-                <h2>{{job.title}}</h2>
-                <p>{{job.job_description}}</p>
-            </div>
-
-            <div class="icons-small">
-            <i ng-repeat="skill in job.skills" class="fa {{skill}} small"></i>
-            </div>
-        </div>
-    </section>
-    <section>
-        <h1>{{'education'|translate}}</h1>
-        <div ng-repeat="job in data.edus" class="job layout layout-row">
-            <div class="flex flex-25">
-                <h2> {{job.company}}</h2>
-                <a ng-href="{{job.href}}">{{job.href_title}}</a>
-                        <span class="period">
-                            <time datetime="{{job.begin}}">{{job.begin.getFullYear()}}</time>
-                            <span ng-if="job.begin.getFullYear() != job.end.getFullYear()"> -
-                                <time datetime="{{job.end}}">{{job.end.getFullYear()}}</time>
-                            </span>
-                        </span>
-            </div>
-            <div>
-                <h2>{{job.title}}</h2>
-                <p>{{job.job_description}}</p>
-            </div>
-            <div class="icons-small">
-            <i ng-repeat="skill in job.skills" class="fa {{skill}} small"></i>
-            </div>
-        </div>
-    </section>
+    <section ng-include="'templates/expirience.html'"> </section>
+    <section ng-include="'templates/education.html'"></section>
     <section id="skills">
         <h1>{{'strong'|translate}}</h1>
         <div class="icons">

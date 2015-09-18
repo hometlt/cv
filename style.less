@@ -8,24 +8,31 @@
 html, body{
     margin: 0;
   text-align: center;
+    transform-origin: top;
 }
 
 
 @media print{
-
+    .container{
+        height: 296mm !important;
+        width: 210mm !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        position: relative;
+        box-sizing: border-box;
+        page-break-after: avoid;
+        /*page-break-before: avoid;*/
+        /*page-break-inside: avoid;*/
+        overflow: hidden;
+    }
   .lang{
     display: none;
   }
     article {
-      margin: 0 0  -0.25mm 0 !important;
+        transform: none !important;
     }
 }
-@media screen{
-    article{
-        margin: 20px auto;
-        box-shadow: 1px 1px 9px 3px;
-    }
-}
+
 
 .lang{
     z-index: 9999;
@@ -50,7 +57,16 @@ html, body{
 section{
     clear: both;
 }
+
+.container{
+    margin: 10px;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 1px 1px 9px 3px;
+}
 article {
+    box-shadow: 1px 1px 9px 3px;
+    transform-origin: top left;
     position: relative;
     box-sizing: border-box;
     height: 297mm;
@@ -59,15 +75,42 @@ article {
     /*page-break-before: avoid;*/
     /*page-break-inside: avoid;*/
     overflow: hidden;
-    display: inline-block;
-    margin: 10px;
 }
 
 * {-webkit-print-color-adjust:exact;}
 
 
 .old{
-    padding: 15mm 15mm 15mm 25mm;
+    padding: 15mm;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+
+    p{
+        margin: 10px 0;
+        text-indent: 15px;
+    }
+    h1{
+
+        font-size: 26px;
+        margin: 0;
+    }
+    h2 {
+         margin: 15px 0px;
+     }
+
+    a{
+        text-decoration: none;
+        color:black;
+    }
+
+    .avatar{
+
+        max-height: 150px;
+        max-width: 150px;
+        margin-left: 20px;
+    }
 
     dt{
         float: left;
@@ -88,7 +131,7 @@ article {
 .modern{
 
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
     height: 100%;
 
     h1 {
@@ -98,6 +141,7 @@ article {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 100;
+        margin-top: 10px;
         margin-bottom: 7px;
     }
 
@@ -123,7 +167,7 @@ article {
             display: block;
         }
         .job{
-            margin-bottom:20px;
+            margin-bottom:10px;
             position: relative;
             a{
                 text-decoration: none;
@@ -157,7 +201,7 @@ article {
                     content: "";
                     width: 1px;
                     top: -3px;
-                    bottom: -17px;
+                    bottom: -7px;
                     right: 8px;
                     border-radius: 10px;
                     background-color: #00BF67;
@@ -169,7 +213,7 @@ article {
             color: #00BF67;
         }
         .job:last-of-type > div:first-of-type:before{
-            bottom: -2px;
+            bottom: 2px;
         }
 
     }
@@ -183,16 +227,16 @@ article {
             margin: 0 2px;
         }
         i.fa {
-            background-size: 44px;
+            background-size: 75%;
             background-position: 50%;
             overflow: hidden;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border: 1px solid #00dd56;
             border-radius: 30px;
             font-size: 40px;
             text-align: center;
-            line-height: 60px;
+            line-height: 50px;
         }
     }
     .icons-small{
@@ -310,8 +354,7 @@ article {
     header{
         background-color: grey;
         background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/cubes.png);
-
-        padding: 30px;
+        padding: 25px;
 
         .avatar{
 
@@ -361,7 +404,7 @@ article {
                 content: "";
                 height: 1px;
                 background-color: grey;
-                width: 70px;
+                width: 50px;
                 position: absolute;
                 margin-top: -1px;
                 top: 50%;
@@ -394,6 +437,10 @@ article {
         right: 20px;
         top: 0;
       }
+        h2{
+            font-size: 18px;
+            margin: 10px 0 4px;
+        }
 
         header{
           padding: 15px;
@@ -418,7 +465,7 @@ article {
 
             h3{
                 margin: 0;
-                font-size: 12px;
+                font-size: 14px;
                 margin-top: -4px;
             }
             .images{
@@ -459,12 +506,12 @@ button, select, html, textarea, input {
 
 
 .flex-35 {
-    -webkit-flex: 0 0 35%;
-    -ms-flex: 0 0 35%;
-    flex: 0 0 35%; }
+    -webkit-flex: 0 0 33%;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%; }
 
 .layout-row > .flex-35 {
-    max-width: 35%;
+    max-width: 33%;
 }
 
 

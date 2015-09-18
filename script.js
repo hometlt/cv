@@ -8,7 +8,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
         "expirience"     : "Work Expirience",
         "education"     : "education",
         "strong"     : "Core Skills",
-        "weak"     : "Core Skills",
+        "weak"     : "Other Skills",
         "portfolio"     : "portfolio",
         "more"     :        "There is more information and examples on my github and linkedIn accounts.",
     });
@@ -31,6 +31,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
 
 
+        $scope.lang = "";
         $scope.setLang = function(langKey) {
             // You can change the language during runtime
             $translate.use(langKey);
@@ -38,10 +39,9 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
             //$scope.jsTrSimple = $translate.instant('SERVICE');
             //$scope.jsTrParams = $translate.instant('SERVICE_PARAMS', $scope.tlData);
             $scope.data = $.extend(true,$scope.data,$scope.data[langKey]);
+            $scope.lang = langKey;
         };
 
-
-        var ru =
 
 
 
@@ -53,7 +53,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                 avatar: "rus.jpg",
                 prompt: "Фронтенд разработчик и программист с 4-хлетним опытом работы.  Имею опыт разработки вебсайтов и html5 приложений, десктопных и мобильных приложений с использованием C++/Qt, Java/swing  и Android development Kit",
 
-                strong_description: "<p>2 года разработки с использованием HTML5 технологий, таких как SVG, Canvas, web workers. JavaScript, JQuery, ajax. </p><p>Опыт работы с фреймворками: RaphaelJS, KineticJS, BackBoneJS. </p><p>Участие в разработке модулей для крупных систем на  PHP  и Java. Имею опыт работы с JSP, Smarty, MySQL.</p><p>Имею основные навыки работы с Python и Django.</p>",
+                strong_description: "<p>2 года разработки с использованием HTML5 технологий, таких как SVG, Canvas, web workers. JavaScript, JQuery, ajax. </p><p>Опыт работы с фреймворками: RaphaelJS, KineticJS, BackBoneJS. </p><p>Участие в разработке модулей для крупных систем на  PHP  и Java. Имею опыт работы с JSP, Smarty, MySQL.</p>",
                 weak_description: "<p>Разработка приложений на C++ (Qt/ Visual C++), Java, OpenGL, mySQL, SQLite</p><p>Имею опыт портирования приложений на мобильные платформы с использованием Android SDK, C++ / Android NDK</p>",
                 info: {
                     adress: {"dt": "Адрес", value: "Тольятти, Россия, 445027"},
@@ -441,6 +441,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                         images: ["image005.png", "image007.png"]
                     },
                     atom3: {
+                        hide:true,
                         title: "Atom3 simulator: Interactive Charts",
                         company: "GamesInEdu",
                         begin: new Date("Jan 2014"),
@@ -449,6 +450,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                         images: ["image011.png", "image013.png"]
                     },
                     smb: {
+                        hide:true,
                         title: "Simulator \"Small and medium business\"",
                         company: "GamesInEdu",
                         begin: new Date("Aug 2012"),
@@ -505,9 +507,23 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
 
 
+        function resize(){
+            var art = $("article");
+            var a = ($(window).height() - 20) / art.height() ;
+            art.css("transform","scale(" + a +")");
+            var _w =  art.width() * a;
+            var _h =  art.height() * a;
+            $(".container").width(_w).height(_h);
+        }
+
+        //$(window).resize(resize);
+        setTimeout(resize)
 
         $scope.setLang("en_US");
             /*
+
+
+
 
 
         <p>Skills</p>
