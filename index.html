@@ -8,17 +8,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <link rel="stylesheet" href="font-awesome.min.css" >
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
-    <link rel="stylesheet" href="style.css"  >
+    <link rel="stylesheet" href="css/font-awesome.min.css" >
+    <link rel='stylesheet' href='css/roboto.css'>
+    <link rel="stylesheet" href="css/style.css"  >
     <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-sanitize.min.js"></script>
     <script src="js/angular-translate.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </head>
-<body ng-controller="ctrl">
+<body ng-controller="ctrl" class="{{view}}-view">
     <div class="lang">
+        <i id="view" class="fa fa-binoculars" ng-click="changeView()" ></i>
         <a href="#" ng-if="lang == 'en_US'" ng-click="setLang('ru_RU')" id="english"></a>
         <a href="#" ng-if="lang == 'ru_RU'" ng-click="setLang('en_US')" id="russian"></a>
     </div>

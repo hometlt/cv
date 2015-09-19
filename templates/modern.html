@@ -75,7 +75,7 @@
                         {{skill.title}}
                     </span>
         </div>
-        <div ng-bind-html="data.strong_description"></div>
+        <p ng-repeat="row in data.strong_description" ng-bind-html="row"></p>
         <h1>{{'weak'|translate}}</h1>
         <div class="icons">
                     <span ng-repeat="skill in data.weak">
@@ -83,7 +83,7 @@
                         {{skill.title}}
                     </span>
         </div>
-        <div ng-bind-html="data.weak_description"></div>
+        <p ng-repeat="row in data.weak_description" ng-bind-html="row"></p>
         <!--<i class="fa fa-chrome"></i>-->
         <!--<i class="fa fa-firefox"></i>-->
         <!--<i class="fa fa-opera"></i>-->

@@ -8,6 +8,33 @@ body {
   text-align: center;
   transform-origin: top;
 }
+.web-view .container {
+  height: auto !important;
+  width: auto !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+.web-view article {
+  transform: none !important;
+}
+.document-view .container {
+  margin: 10px;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 1px 1px 9px 3px;
+}
+.document-view article {
+  box-shadow: 1px 1px 9px 3px;
+  transform-origin: top left;
+  position: relative;
+  box-sizing: border-box;
+  height: 297mm;
+  width: 210mm;
+  page-break-after: avoid;
+  /*page-break-before: avoid;*/
+  /*page-break-inside: avoid;*/
+  overflow: hidden;
+}
 @media print {
   .container {
     height: 296mm !important;
@@ -34,15 +61,26 @@ body {
   right: 0;
   top: 0;
 }
+.lang #view {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background: #8BC88B;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 2px;
+}
 .lang #english {
-  background-image: url(images/eng.png);
+  background-image: url(../icons/eng.png);
   background-size: 100%;
   display: inline-block;
   width: 40px;
   height: 40px;
 }
 .lang #russian {
-  background-image: url(images/rus.png);
+  background-image: url(../icons/rus.png);
   background-size: 100%;
   display: inline-block;
   width: 40px;
@@ -50,24 +88,6 @@ body {
 }
 section {
   clear: both;
-}
-.container {
-  margin: 10px;
-  display: inline-block;
-  overflow: hidden;
-  box-shadow: 1px 1px 9px 3px;
-}
-article {
-  box-shadow: 1px 1px 9px 3px;
-  transform-origin: top left;
-  position: relative;
-  box-sizing: border-box;
-  height: 297mm;
-  width: 210mm;
-  page-break-after: avoid;
-  /*page-break-before: avoid;*/
-  /*page-break-inside: avoid;*/
-  overflow: hidden;
 }
 * {
   -webkit-print-color-adjust: exact;
@@ -157,7 +177,7 @@ article {
   margin: 0;
 }
 .modern main .job > div:nth-child(2) {
-  padding-left: 10px;
+  padding-left: 6px;
 }
 .modern main .job > div:first-of-type {
   position: relative;
@@ -242,82 +262,82 @@ article {
   background-repeat: no-repeat;
 }
 .modern i.fa.phonegap {
-  background-image: url(images/phonegap.png);
+  background-image: url(../icons/phonegap.png);
 }
 .modern i.fa.angular {
-  background-image: url(images/angular.small.png);
+  background-image: url(../icons/angular.small.png);
 }
 .modern i.fa.photoshop {
-  background-image: url(images/photoshop.png);
+  background-image: url(../icons/photoshop.png);
 }
 .modern i.fa.html5 {
-  background-image: url(images/html5.small.png);
+  background-image: url(../icons/html5.small.png);
 }
 .modern i.fa.svg {
-  background-image: url(images/svg-logo.svg);
+  background-image: url(../icons/svg-logo.svg);
   background-size: 40px;
   background-position: 10px;
 }
 .modern i.fa.svg.small {
-  background-image: url(images/svg-logo.svg);
+  background-image: url(../icons/svg-logo.svg);
   background-size: 16px;
   background-position: 2px;
 }
 .modern i.fa.css3 {
-  background-image: url(images/css3.small.png);
+  background-image: url(../icons/css3.small.png);
 }
 .modern i.fa.canvas {
-  background-image: url(images/canvas.small.png);
+  background-image: url(../icons/canvas.small.png);
   background-size: 67%;
   background-position: 50%;
 }
 .modern i.fa.umi.small {
-  background-image: url(images/umi.small.png);
+  background-image: url(../icons/umi.small.png);
 }
 .modern i.fa.cpp {
-  background-image: url(images/cpp.png);
+  background-image: url(../icons/cpp.png);
   background-size: 90%;
 }
 .modern i.fa.qt.small {
-  background-image: url(images/qt.png);
+  background-image: url(../icons/qt.png);
   background-size: 16px;
   background-position: 2px;
 }
 .modern i.fa.nodejs {
-  background-image: url(images/nodejs.small.png);
+  background-image: url(../icons/nodejs.small.png);
 }
 .modern i.fa.qt {
-  background-image: url(images/qt.png);
+  background-image: url(../icons/qt.png);
   background-size: 40px;
   background-position: 10px;
 }
 .modern i.fa.java {
-  background-image: url(images/java.small.png);
+  background-image: url(../icons/java.small.png);
 }
 .modern i.fa.opengl {
-  background-image: url(images/opengl.png);
+  background-image: url(../icons/opengl.png);
   background-size: 95%;
   background-position: 50%;
 }
 .modern i.fa.mysql {
-  background-image: url(images/mysql.png);
+  background-image: url(../icons/mysql.png);
 }
 .modern i.fa.php {
-  background-image: url(images/php.small.svg);
+  background-image: url(../icons/php.small.svg);
   background-size: 90%;
   background-position: 50%;
 }
 .modern i.fa.fire {
-  background-image: url(images/fire.png);
+  background-image: url(../icons/fire.png);
 }
 .modern i.fa.smoke {
-  background-image: url(images/smoke.png);
+  background-image: url(../icons/smoke.png);
 }
 .modern i.fa.volunteer {
-  background-image: url(images/volunteer.png);
+  background-image: url(../icons/volunteer.png);
 }
 .modern i.fa.webgl {
-  background-image: url(images/WebGL.png);
+  background-image: url(../icons/WebGL.png);
   background-size: 70px;
   background-position: -5px;
 }

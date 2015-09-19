@@ -1,6 +1,6 @@
 <h1>{{'expirience'|translate}}</h1>
 
-<div ng-repeat="job in data.jobs"   class="job layout layout-row" ng-class="{active: !job.end}" ng-hide="job.hide">
+<div ng-repeat="job in data.jobs"   class="job layout layout-row" ng-class="{active: !job.end}" ng-hide="!web && job.hide">
     <div class="flex flex-25">
         <h2> {{job.company}}</h2>
         <a ng-href="{{job.href}}">{{job.href_title}}</a>
@@ -10,7 +10,7 @@
                                 <time datetime="{{job.end}}">{{job.end.getFullYear()}}</time>
                             </span>
                              <span ng-if="!job.end"> -
-                                today
+                                {{'today'|translate}}
                             </span>
                         </span>
     </div>

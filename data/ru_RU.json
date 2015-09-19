@@ -1,0 +1,150 @@
+{
+  "name": "Пономарев Денис",
+  "title": "Фронтенд ВЕБ Программист",
+  "avatar": "images/rus.jpg",
+  "prompt": "Фронтенд разработчик и программист с 4-хлетним опытом работы.  Имею опыт разработки вебсайтов и html5 приложений, десктопных и мобильных приложений с использованием C++/Qt, Java/swing  и Android development Kit",
+
+  "strong_description": [
+    "2 года разработки с использованием HTML5 технологий, таких как SVG, Canvas, web workers. JavaScript, JQuery, ajax.",
+    "Есть Опыт работы с фреймворками: RaphaelJS, KineticJS, BackBoneJS.",
+    "Участие в разработке модулей для крупных систем на  PHP  и Java. Имею опыт работы с JSP, Smarty, MySQL."],
+  "weak_description": [
+    "Разработка приложений на C++ (Qt/ Visual C++), Java, OpenGL, mySQL, SQLite",
+    "Имею опыт портирования приложений на мобильные платформы с использованием Android SDK, C++ / Android NDK"],
+  "info": {
+    "adress": {
+      "dt": "Адрес",
+      "value": "Тольятти, Россия, 445027"
+    },
+    "birth": {
+      "dt": "Дата рождения",
+      "value": "9 Янв 1991 (24 года)"
+    },
+    "marital": {
+      "dt": "Семейное положение",
+      "value": "Не женат"
+    }
+  },
+  "interests": {
+    "travel": {
+      "value": "Люблю путешествовать"
+    },
+    "volunteer": {
+      "value": "Учавствовал в волонтерских программах и организации мероприятий с иностранными волонтерами."
+    },
+    "fire": {
+      "value": "Люблю велосипед и скалолазание. Выступаю с группой огненного шоу."
+    },
+    "smoke": {
+      "value": "Не курю."
+    }
+  },
+  "jobs": {
+    "upwork": {
+      "company": "Фриланс",
+      "title": "Фронтенд программист",
+      "job_description": "Разработка веб приложений на AngularJS/ NodeJS."
+    },
+    "inteduca": {
+      "city": "Москва",
+      "title": "Фронтенд программист",
+      "company_description": "Интедука разработывает образовательные игры для обучения персонала таких компаний, как Megafon, Canon , Pepsico и другие",
+      "job_description": "Работал с AngularJS над приложениями для Megafon, Canon, Pepsico и других"
+    },
+    "gamesinedu": {
+      "city": "Москва",
+      "title": "Фронтенд программист",
+      "company_description": "Clients include:  Skolkovo Moscow School of Management,  Rosatom Nuclear Energy State Corporation,  Russian Presidential Academy of National Economy and Public Administration",
+      "job_description": "В мои обязанности входила, доработка игровых моделей бизнес-игр,  верстка и разработка интерактивных карт и элементов дизайна, разработка web-приложений"
+    },
+    "brightstudio": {
+      "city": "Тольятти",
+      "title": "ВЕБ программист",
+      "job_description": "Разработка  веб-сайтов на системе UMI-CMS."
+    },
+    "dkc": {
+      "company": "DKC Russia",
+      "city": "Тольятти",
+      "title": "Qt/C++ Программист",
+      "company_description": "KC works under its mission – to provide international customers by hi-tech products for electrical installations.",
+      "job_description": "Разработка  Fix Combitech 2."
+    },
+    "polad": {
+      "company": "ЗАО «ПОЛАД»",
+      "city": "Тольятти",
+      "title": "Системный администратор",
+      "job_description": " Первая официальная работа в сфере IT. В мои обязанности входила поддержка пользователей, настройка локальной сети ПОЛАД и доработка корпоративного сайта компании."
+    }
+  },
+
+  "edus": {
+    "tltsu": {
+      "company": "ТГУ",
+      "city": "Тольятти",
+      "title": "Специалист,  математик - программист",
+      "company_description": "Прикладная математика и информатика",
+      "job_description": "Тольяттинский Государственный Университет, 5 лет. Диплом"
+    },
+    "ncedu": {
+      "company": "NetCracker",
+      "city": "Тольятти",
+      "title": "Java programmer",
+      "company_description": "УНЦ «инфоком» NetCracker",
+      "job_description": "Курсы: Программирование на Ja SE/EE, 130 часов, БД Oracle 96 часов"
+    },
+    "itschool": {
+      "company": "Школа ИТ",
+      "city": "Тольятти",
+      "title": "Инженер- программист",
+      "company_description": "НОУ 'Школа Информационных технологий'",
+      "job_description": "Инженерная информатика, 976 часов . ECDL Сертификат"
+    }
+  },
+
+  "works": {
+    "rosatom": {
+      "title": "Управление в ядерной энергетике",
+      "company": "ГК РосАтом",
+      "description": "обязанности: верстка, разработка всех интерактивных карт и элементов. Программирование игровой модели"
+    },
+    "sokrat": {
+      "title": "HTML5 Тренажер по сзематизации.",
+      "description": "Разработка веб-тренажера по схематизации. Приложение используется как образовательный инструмент в школах менеджмента."
+    },
+    "teacher": {
+      "title": "Симулятор учителя",
+      "description": "Симулятор учителя."
+    },
+    "photofieria": {
+      "title": "Редактор Альбомов",
+      "description": "Редактор альбомов с поддержкой фильтров, обрезки изображений, рамок , форматировани текста и т.д. Оптимизирован для работы на планшетах и телефонах"
+    },
+    "planogram": {
+      "title": "Редактор полки",
+      "description": "Симулятор мерчандайзига.  Выложи свою полки."
+    },
+    "dialogs": {
+      "title": "Интерактивные туры, тесты, диалоги",
+      "clients": ["Pepsico", "Megafon", "Canon", "Sberbank"],
+      "description": "Интерактивные туры, тесты, диалоги ."
+    },
+    "atom3": {
+      "title": "Atom3 simulator: Interactive Charts",
+      "description": "Программирование элементов интерфейса"
+    },
+    "smb": {
+      "title": "симулятор \"Малый и средний бизнесс\"",
+      "description": "разработка интерактивных карт и элементов"
+    },
+    "fc2": {
+      "href": "http://www.dkc.ru/en/support/software/",
+      "description": "Версия программы «FIX Combitech 2.0» предназначена для расчета аксессуаров и крепежа металлических лотков.",
+      "details": "Features:<ul><li>Save and load projects, Export to Excel, Word and XML</li><li>local and network databases.</li><li>Self- update system</li></ul>"
+    },
+    "mwx": {
+      "title": "MinesWeeper Extended",
+      "description": "Создание расширенной версии игры сапер. Поддержка различных типов игрового поля, поддержки модификаций на JavaScript, Портирована на Android.",
+      "skills": ["cpp", "Qt", "OpenGL"]
+    }
+  }
+}
