@@ -76,6 +76,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
         $scope.sendToFront = function(){
             $("html").animate({ scrollTop: $(document).height() }, "slow");
+            $("body").animate({ scrollTop: $(document).height() }, "slow");
             $("#second").removeClass("back");
         };
 

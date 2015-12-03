@@ -20,6 +20,7 @@ body {
   transform: translate(0, 0) rotate(0) !important;
 }
 .web-view article {
+  transform: translate(0, 0) rotate(0) !important;
   background: white;
   position: relative;
 }
