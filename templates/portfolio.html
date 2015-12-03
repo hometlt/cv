@@ -1,9 +1,12 @@
 
 <div  id="portfolio" class="modern layout layout-row">
 
-    <header class="flex flex-5">
+    <header class="flex flex-5" ng-click="sendToFront()" style="cursor: pointer">
         <div class="rotated">
-            <h1>{{data.name}} <span>/ {{data.title}}</span></h1>
+            <h1>{{data.name}}
+                <!--<span>/ {{data.title}}</span> -->
+                <span>/ {{'portfolio'|translate}}
+                </span></h1>
         </div>
     </header>
     <main>
@@ -29,7 +32,7 @@
 
                 <p>{{work.description}}</p>
                 <div class="images">
-                    <img ng-repeat="img in work.images" ng-src="portfolio/{{img}}">
+                    <img img-preload ng-repeat="img in work.images" ng-src="portfolio/{{img.url || img}}" ng-click="previewImage(img)" alt="{{img.description}}">
                 </div>
             </div>
 

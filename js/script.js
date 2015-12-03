@@ -1,5 +1,5 @@
 angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($translateProvider) {
-    $translateProvider.useSanitizeValueStrategy('sanitize');
+    $translateProvider.useSanitizeValueStrategy(null);
 
     // Adding a translation table for the English language
     $translateProvider.translations('en_US', {
@@ -12,7 +12,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
         "strong"     : "Core Skills",
         "weak"     : "Other Skills",
         "portfolio"     : "Portfolio",
-        "more"     :        "There is more information and examples on my github and linkedIn accounts."
+        "more"     :        "More information, links and examples on my github and linkedIn accounts."
     });
 
     // Adding a translation table for the Russian language
@@ -36,10 +36,19 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
         $scope.lang = "";
         $scope.view = "document";
+        $scope.closePreview = function() {
+            delete $scope.preview;
+        }
+        $scope.previewImage = function(img) {
+            $scope.preview = img.url ? img : {url: img};
+        }
         $scope.changeView = function() {
             $scope.view = ($scope.view == "document" )? "web" : "document";
             $scope.web = $scope.view == "web";
         };
+        $scope.print = function() {
+            window.print();
+        }
         $scope.setLang = function(langKey) {
 
             $http.get("data/" + langKey + ".json").then(function(data){
@@ -65,20 +74,105 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
         };
 
+        $scope.sendToFront = function(){
+            $("html").animate({ scrollTop: $(document).height() }, "slow");
+            $("#second").removeClass("back");
+        };
+
+
         $scope.data = {};
 
+        $scope.right = $(window).width();
+
         function resize(){
-            var art = $("article");
-            var a = ($(window).height() - 20) / art.height() ;
-            art.css("transform","scale(" + a +")");
-            var _w =  art.width() * a;
-            var _h =  art.height() * a;
-            $(".container").width(_w).height(_h);
+
+            var _c =$($(".container")[0]);
+            var _r =_c.width() + _c.position().left + 20;
+            twopages = _r <  $("body").width() / 2;
+            console.log(twopages);
+            doBack();
+
+            $scope.right = $($(".container")[1]).position().left + $($(".container")[1]).width() * 1.1 + 20  ;
+            $scope.left = $($(".container")[0]).position().left * 0.7;
+            $scope.$apply();
         }
 
-        //$(window).resize(resize);
-        setTimeout(resize);
+
+        var twopages= false;
+
+        setTimeout(function(){
+             var art = $("article");
+             var _ah = 1123;
+             var _aw = 794;
+             var a = ($(window).height() - 25) / _ah ;//art.height() ;
+             art.css("transform","scale(" + a +")");
+             var _w =  _aw * a;
+             var _h = _ah * a;
+             $(".container").width(_w).height(_h);
+            resize();
+            doBack();
+        });
+        $(window).resize(resize);
+
+
+
+        $(document).scroll(doBack)
+
+        function doBack(){
+
+            if(twopages ||  $("html").scrollTop() || $("body").scrollTop()  > $("html")[0].scrollHeight * 0.1){
+                $("#second").removeClass("back");
+            }else{
+                $("#second").addClass("back");
+            }
+        }
 
         $scope.setLang("en_US");
 
 })
+    .directive('imgPreload', ['$rootScope', function($rootScope) {
+        return {
+            restrict: 'A',
+            scope: {
+                ngSrc: '@',
+                onLoad: "&"
+            },
+            link: function(scope, element, attrs) {
+                scope.spinner = $('<i class="fa fa-spinner fa-pulse">');
+                element.addClass('fade');
+
+                element.on('load', function() {
+                    // console.log("> add fade in class to...", element);
+                    element.addClass('in');
+                    scope.spinner.remove();
+                    if(attrs.onLoad){
+                        var $data = {
+                            image: this
+                        }
+                        scope.onLoad({ $data: $data });
+                    }
+                    scope.$apply();
+                }).on('error', function() {
+                    scope.spinner.remove();
+                    scope.$apply();
+                });
+
+                scope.$watch('ngSrc', function(newVal) {
+                    if(newVal == undefined || newVal == ""){
+                        element.attr("src", "");
+                        if(attrs.onLoad){
+                            var $data = {
+                                image: element[0]
+                            }
+                            scope.onLoad({ $data: $data });
+                        }
+                    }
+                    if(element[0].complete == false){
+                        element.removeClass('in');
+                        scope.spinner.insertAfter(element);
+                    }
+                    // console.log("> remove fade in class to...", newVal, element);
+                });
+            }
+        };
+    }])

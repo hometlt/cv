@@ -211,26 +211,26 @@
 
     "works": {
       "rosatom": {
-        "title": "Nuclear plant management simulator",
+        "title": "Nuclear plant management",
         "company": "GamesInEdu",
         "client": "RosAtom",
         "description": "Simulator for Nuclear Energy State Corporation. Creating game models and UI (optimized for IE8 and iPad).",
         "href": "http://atom2.modeus.info",
         "begin": "Jan 2013",
         "end": "Jul 2013",
-        "images_full": ["image019.png","image021.png","image023.png","image025.png","image027.png","image029.png"],
-        "images": ["image021.png", "image029.png"]
+        "images_full": ["image019.jpg","image021.jpg","image023.jpg","image025.jpg","image027.jpg","image029.jpg"],
+        "images": [{"url": "image021.jpg" , "description":"Atom 2"}, "image029.jpg"]
       },
       "sokrat": {
         "title": "HTML5 Scheme editor.",
         "company": "GamesInEdu",
         "description": "Development of scheme render and analyzer. Application used as educational tool in management Schools. It gives task to student and ask to draw the correct scheme.",
-        "skills": ["HTML5", "canvas", "KineticJS"],
+        "skills": ["HTML5"],
         "href": "http://sokrat.hometlt.ru",
         "begin": "Sep 2012",
         "end": "Mar 2013",
-        "images": ["image031.png", "image033.png"],
-        "images_full": ["image031.png","image033.png","image035.png","image037.png","image039.png","image041.png"]
+        "images": ["image031.jpg", "image033.jpg"],
+        "images_full": ["image031.jpg","image033.jpg","image035.jpg","image037.jpg","image039.jpg","image041.jpg"]
       },
       "teacher": {
         "title": "Simulator of Teacher",
@@ -238,14 +238,14 @@
         "begin": "2014",
         "end": "2014",
         "description": "you are placed in a situation common to teachers - instruction, reviewing, planning, tutoring. FrontEnd Part visualize classroom, students and teachers, their actions during teaching process.",
-        "images": ["image010.png"]
+        "images": ["image010.jpg"]
       },
       "photofieria": {
         "title": "HTML5 Album editor.",
         "description": "Album editor is a tool to create presentations or photo albums with text and photos. It has editing tools like image filters/cropping/resizing, different borders/shapes/frames, text styling. It works also on phones and tablets.",
         "skills": ["HTML5", "canvas", "FabricJS"],
         "begin": "May 2015",
-        "images": ["image043.png", "image045.png", "image047.png"]
+        "images": ["image043.jpg", "image045.jpg", "image047.jpg"]
       },
       "planogram": {
         "title": "Planogram editor",
@@ -254,17 +254,17 @@
         "begin": "2014",
         "end": "2014",
         "description": "tool for merchandising simulator.  Interactive visual representations of a store's products.",
-        "images": ["image003.png"]
+        "images": ["image003.jpg"]
       },
       "dialogs": {
-        "title": "Interactive Tours, Tests and dialogs",
+        "title": "Pepsico Interactive Tours",
         "company": "Inteduca",
         "href": "http://sb.hometlt.ru/",
         "clients": ["Pepsico", "Megafon", "Canon", "Sberbank"],
         "begin": "2014",
         "end": "2014",
         "description": "Educational tool for Pepsico employees. Interactive panoramas (virtual tours) with video elements,tests, photo and video dialogs. ",
-        "images": ["image005.png", "image007.png"]
+        "images": ["image005.jpg", "image007.jpg"]
       },
       "atom3": {
         "hide":true,
@@ -273,7 +273,7 @@
         "begin": "Jan 2014",
         "end": "Mar 2014",
         "description": "Creating user interface elements",
-        "images": ["image011.png", "image013.png"]
+        "images": ["image011.jpg", "image013.jpg"]
       },
       "smb": {
         "hide":true,
@@ -283,7 +283,7 @@
         "end": "Apr 2013",
         "href": "http://smb.modeus.info",
         "description": "crating game models and user interface",
-        "images": ["image015.png", "image017.png"]
+        "images": ["image015.jpg", "image017.jpg"]
       },
       "fc2": {
         "title": "Fix Combitech 2",

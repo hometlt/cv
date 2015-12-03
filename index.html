@@ -19,22 +19,50 @@
 </head>
 <body ng-controller="ctrl" class="{{view}}-view">
     <div class="lang">
+        <i id="print" class="fa fa-print" ng-click="print()" ></i>
         <i id="view" class="fa fa-binoculars" ng-click="changeView()" ></i>
-        <a href="#" ng-if="lang == 'en_US'" ng-click="setLang('ru_RU')" id="english"></a>
-        <a href="#" ng-if="lang == 'ru_RU'" ng-click="setLang('en_US')" id="russian"></a>
+        <a href="#" ng-if="lang == 'ru_RU'" ng-click="setLang('en_US')" id="english"></a>
+        <a href="#" ng-if="lang == 'en_US'" ng-click="setLang('ru_RU')" id="russian"></a>
     </div>
 
-
-    <div class="container" >
-        <article ng-include="'templates/modern.html'"></article>
+    <div id="preview-shadow" ng-if="preview" ng-click="closePreview()" >
+        <div>
+            <img id="preview-image" ng-src="portfolio/{{preview.url}}">
+            <p>{{preview.description}}</p>
+        </div>
     </div>
 
-    <div class="container">
-        <article ng-include="'templates/portfolio.html'"></article>
-    </div>
+    <div id="table">
 
-    <div class="container">
-        <article ng-include="'templates/old.html'"></article>
+        <div id="left-objects" ng-style="{width: left}">
+            <img class="rotated"  src="images/notebook.png" id="notebook">
+            <img class="rotated"  src="images/pencil.png" id="pencil">
+        </div>
+
+        <div id="right-objects" ng-style="{left: right}">
+            <img class="rotated" src="images/coffee.png" id="coffee">
+            <img class="rotated"  src="images/keyboard.png" id="keyboard">
+        </div>
     </div>
+    <!--<div id="documents-place">-->
+
+        <div class="container" id="first">
+            <article>
+                <div  ng-include="'templates/modern.html'"></div>
+            </article>
+        </div>
+
+        <div class="container" id="second" >
+            <article>
+                <div  ng-include="'templates/portfolio.html'"></div>
+            </article>
+        </div>
+
+        <div class="container" ng-if="old">
+            <article>
+                <div  ng-include="'templates/old.html'"></div>
+            </article>
+        </div>
+    <!--</div>-->
 </body>
 </html>
