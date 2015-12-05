@@ -3,7 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/data/en_US.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data/ru_RU.json" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/imgPreload.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/script.js" charset="UTF-8" />
   </component>
 </project>

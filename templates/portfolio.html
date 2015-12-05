@@ -1,7 +1,7 @@
 
 <div  id="portfolio" class="modern layout layout-row">
 
-    <header class="flex flex-5" ng-click="sendToFront()" style="cursor: pointer">
+    <header class="flex" ng-click="sendToFront()" style="cursor: pointer">
         <div class="rotated">
             <h1>{{data.name}}
                 <!--<span>/ {{data.title}}</span> -->
@@ -16,7 +16,9 @@
 
             <div>
                 <h2>
-                    {{work.title}}
+                    <a href="#" ng-click="setProject(work)">
+                            {{work.title}}
+                    </a>
                 </h2>
                 <h3>{{work.company}} <span ng-if="work.company && work.begin">/</span>
                         <span class="period">
@@ -34,10 +36,6 @@
                 <div class="images">
                     <img img-preload ng-repeat="img in work.images" ng-src="portfolio/{{img.url || img}}" ng-click="previewImage(img)" alt="{{img.description}}">
                 </div>
-            </div>
-
-            <div class="icons-small">
-                <i ng-repeat="skill in work.skills" class="fa {{skill}} small"></i>
             </div>
         </div>
 

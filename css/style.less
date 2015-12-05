@@ -35,31 +35,20 @@ body{
         position: relative;
     }
 }
+
+
+
+
 #preview-image{
     box-shadow: 0px 0px 5px 1px;
 }
-.document-view {
-    article {
-        >div {
-            height: 100%;
-        }
-            background: white;
-        transform-origin: top left;
-        position: relative;
-        box-sizing: border-box;
-        height: 297mm;
-        width: 210mm;
-        page-break-after: avoid;
-        /*page-break-before: avoid;*/
-        /*page-break-inside: avoid;*/
-        overflow: hidden;
-    }
-}
+
+
 #table{
     position: fixed;
     width:100%;
     height: 100%;
-    background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png);
+    background-image: url(../images/retina_wood.png);
     background-color: #EBD5B8;
     background-position: right;
 
@@ -129,7 +118,25 @@ body{
 
 
 @media screen {
+
+
+
     .document-view {
+        article {
+            >div {
+                height: 100%;
+            }
+            background: white;
+            transform-origin: top left;
+            position: relative;
+            box-sizing: border-box;
+            height: 297mm;
+            width: 210mm;
+            page-break-after: avoid;
+            /*page-break-before: avoid;*/
+            /*page-break-inside: avoid;*/
+            overflow: hidden;
+        }
         .container {
             margin: 10px;
             display: inline-block;
@@ -140,6 +147,61 @@ body{
             transition: transform 1s;
             &.back {
                 transform: translate(-4%, -102%) rotate(-2deg);
+            }
+            &#project{
+                height: 671px;
+                width: 950px;
+                position: fixed;
+                z-index: 10;
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                box-shadow: 0px 0px 10px 2px;
+                .main{
+                    padding: 10px 20px 20px 30px;
+                }
+                article{
+                    height: 210mm;
+                    width: 297mm;
+                }
+                .images{
+                    div{
+                        display: inline-block;
+                        background-size: cover;
+                        width: 89mm;
+                        height: 80mm;
+                        margin-right: 5mm;
+                        margin-bottom: 5mm;
+                        border: 1px solid;
+                    }
+                }
+                header{
+                    span{
+                        color: black;
+                        font-size: 0.8em;
+                    }
+                    .fa-times{
+
+                        float: right;
+                        color: black;
+                        height: 7mm;
+                        line-height: 7mm;
+                        &:hover{
+                            color: #00BF67;
+                        }
+                    }
+                    padding: 0;
+                    height: 10mm;
+                    box-sizing: border-box;
+                    display: block;
+                    width: auto;
+                    margin-top: 0;
+                    overflow: hidden;
+                    h1{
+                        text-align: left;
+                        margin: -3.5mm 0mm;
+                    }
+                }
             }
         }
         #first {
@@ -330,6 +392,11 @@ section{
         h2{
             font-size: 15px;
             margin: 0;
+            a{
+                font-size: 15px;
+                color: #000;
+                text-decoration: none;
+            }
         }
         a{
             font-size: 10px;
@@ -409,12 +476,13 @@ section{
         }
     }
     .icons-small{
-      display: none;
-        position: absolute;
+
+        /* position: absolute; */
         text-align: center;
-        right: 0;
-        top: 100%;
-        margin-top: -5px;
+        /* right: 0; */
+        /* top: 0; */
+        margin-top: -1px;
+        float: right;
         i.fa {    margin: 2px;
             display: inline-block;
             background-size: 16px;
@@ -521,9 +589,11 @@ section{
 
 
     header{
+
+        width: 10mm;
         background-color: grey;
-        background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/cubes.png);
-        padding: 25px;
+        background-image: url(../images/cubes.png);
+        padding: 5mm !important;
 
         .avatar{
 
@@ -534,6 +604,7 @@ section{
             text-align: center;
             font-size: 22px;
             margin-bottom: 0;
+            margin-top: 0;
         }
         h2{
             text-align: center;
@@ -614,10 +685,12 @@ section{
         header{
           padding: 15px;
             > .rotated{
-                transform: rotate(90deg) translate(0,-100%);
+                transform: rotate(-90deg);
                 transform-origin: left top 0;
                 white-space: nowrap;
-                margin: -9px;
+                margin: -13px;
+                position: absolute;
+                bottom: 0;
                 span{
 
                     color: black;

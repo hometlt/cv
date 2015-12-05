@@ -19,10 +19,10 @@
 </head>
 <body ng-controller="ctrl" class="{{view}}-view">
     <div class="lang">
-        <i id="print" class="fa fa-print" ng-click="print()" ></i>
+        <i id="print" class="fa fa-print"     ng-click="print()" ></i>
         <i id="view" class="fa fa-binoculars" ng-click="changeView()" ></i>
-        <a href="#" ng-if="lang == 'ru_RU'" ng-click="setLang('en_US')" id="english"></a>
-        <a href="#" ng-if="lang == 'en_US'" ng-click="setLang('ru_RU')" id="russian"></a>
+        <a href="#" ng-if="lang == 'ru_RU'"   ng-click="setLang('en_US')" id="english"></a>
+        <a href="#" ng-if="lang == 'en_US'"   ng-click="setLang('ru_RU')" id="russian"></a>
     </div>
 
     <div id="preview-shadow" ng-if="preview" ng-click="closePreview()" >
@@ -46,23 +46,32 @@
     </div>
     <!--<div id="documents-place">-->
 
-        <div class="container" id="first">
-            <article>
-                <div  ng-include="'templates/modern.html'"></div>
-            </article>
-        </div>
 
-        <div class="container" id="second" >
-            <article>
-                <div  ng-include="'templates/portfolio.html'"></div>
-            </article>
-        </div>
 
-        <div class="container" ng-if="old">
-            <article>
-                <div  ng-include="'templates/old.html'"></div>
-            </article>
-        </div>
+
+    <div class="container" id="first">
+        <article>
+            <div  ng-include="'templates/modern.html'"></div>
+        </article>
+    </div>
+
+    <div class="container" id="second" >
+        <article>
+            <div  ng-include="'templates/portfolio.html'"></div>
+        </article>
+    </div>
+
+    <div class="container" ng-if="old">
+        <article>
+            <div  ng-include="'templates/old.html'"></div>
+        </article>
+    </div>
+
+    <div class="container" id="project" ng-show="project">
+        <article>
+            <div  ng-include="'templates/project.html'"></div>
+        </article>
+    </div>
     <!--</div>-->
 </body>
 </html>
