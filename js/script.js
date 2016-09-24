@@ -3,39 +3,40 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
     // Adding a translation table for the English language
     $translateProvider.translations('en_US', {
-        "today"     : "today",
-        "about"     : "About",
-        "contacts"     : "Contacts",
-        "interests"     : "Interests",
-        "expirience"     : "Work Expirience",
-        "education"     : "Education",
-        "strong"     : "Core Skills",
-        "weak"     : "Other Skills",
-        "portfolio"     : "Portfolio",
-        "more"     :        "More information, links and examples on my github and linkedIn accounts."
+        'today'     : 'today',
+        'about'     : 'About',
+        'contacts'     : 'Contacts',
+        'interests'     : 'Interests',
+        'expirience'     : 'Work Expirience',
+        'education'     : 'Education',
+        'strong'     : 'Core Skills',
+        'weak'     : 'Other Skills',
+        'portfolio'     : 'Portfolio',
+        'more'     :        'More information, links and examples on <a href="//cv.hometlt.ru">cv.hometlt.ru</a> or my github and linkedIn accounts.'
     });
 
     // Adding a translation table for the Russian language
     $translateProvider.translations('ru_RU', {
-        "today"     : "сейчас",
-        "about"     : "Обо мне",
-        "contacts"     : "Контакты",
-        "interests"     : "Интересы",
-        "expirience"     : "Опыт работы",
-        "education"     : "Образование.",
-        "strong"     : "Основные навыки",
-        "weak"     :    "Другие навыки",
-        "portfolio"     : "Портфолио",
-        "more"     :        "Больше работ и информации о проектах на аккаунтах в github и linkedIn."
+        'today'     : 'сейчас',
+        'about'     : 'Обо мне',
+        'contacts'     : 'Контакты',
+        'interests'     : 'Интересы',
+        'expirience'     : 'Опыт работы',
+        'education'     : 'Образование.',
+        'strong'     : 'Основные навыки',
+        'weak'     :    'Другие навыки',
+        'portfolio'     : 'Портфолио',
+        'more'     :        'Больше работ и информации о проектах на <a href="//cv.hometlt.ru">cv.hometlt.ru</a>, аккаунтах в github и linkedIn.'
     });
 
 })
-.controller("ctrl",function($scope,$translate,$http){
+    .controller('ctrl',function($scope,$translate,$http,$timeout,$filter){
 
 
 
-        $scope.lang = "";
-        $scope.view = "document";
+        $scope.old = true;
+        $scope.lang = '';
+        $scope.view = 'document';
         $scope.closePreview = function() {
             delete $scope.preview;
         }
@@ -43,17 +44,17 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
             $scope.preview = img.url ? img : {url: img};
         }
         $scope.changeView = function() {
-            $scope.view = ($scope.view == "document" )? "web" : "document";
-            $scope.web = $scope.view == "web";
+            $scope.view = ($scope.view == 'document' )? 'web' : 'document';
+            $scope.web = $scope.view == 'web';
         };
         $scope.print = function() {
             window.print();
         }
         $scope.setLang = function(langKey) {
 
-            $http.get("data/" + langKey + ".json").then(function(data){
+            $http.get('data/' + langKey + '.json').then(function(data){
 
-                var _b = ["jobs", "edus", "works"];
+                var _b = ['jobs', 'edus', 'works'];
                 for (var b in _b){
                     var _arr = data.data[_b[b]];
                     for (var i in _arr) {
@@ -72,22 +73,30 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                 //$scope.jsTrSimple = $translate.instant('SERVICE');
                 //$scope.jsTrParams = $translate.instant('SERVICE_PARAMS', $scope.tlData);
                 $scope.lang = langKey;
+                $scope.$broadcast("update");
             })
 
         };
 
         $scope.sendToFront = function(){
-            $("html").animate({ scrollTop: $(document).height() }, "slow");
-            $("body").animate({ scrollTop: $(document).height() }, "slow");
-            $("#second").removeClass("back");
+            $('html').animate({ scrollTop: $(document).height() }, 'slow');
+            $('body').animate({ scrollTop: $(document).height() }, 'slow');
+            $('#second').removeClass('back');
         };
 
 
         $scope.setProject = function(work){
             $scope.project = work;
+            $timeout(function(){
+                $scope.showProject = true;
+            })
+
         }
         $scope.closeProject = function(){
-            $scope.project = null;
+            $scope.showProject = false;
+            $timeout(function(){
+                $scope.project = null;
+            },1000)
         };
         $scope.data = {};
 
@@ -95,37 +104,42 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
         function resize(){
 
-            var _c =$($(".container")[0]);
-            var _r =_c.width() + _c.position().left + 20;
-            twopages = _r <  $("body").width() / 2;
-            console.log(twopages);
+            var art = $('article,#card');
+            var _ah = 1123;
+            var _aw = 794;
+            var a = ($(window).height() - 25) / _ah ;//art.height() ;
+            art.css('transform','scale(' + a +')');
+            var _w =  _aw * a;
+            var _h = _ah * a;
+
+
+            var _containers = $('.container');
+
+            if(!_containers.length)return;
+            _containers.width(_w).height(_h);
+            var _c = $(_containers[0]);
+            var _r = _c.width() + _c.position().left + 20;
+            twopages = _r <  $('body').width() / 2;
             doBack();
 
-            $scope.right = $($(".container")[1]).position().left + $($(".container")[1]).width() * 1.1 + 20  ;
-            $scope.left = $($(".container")[0]).position().left * 0.7;
+            if(_containers[1]){
+                $scope.right = $(_containers[1]).position().left + $(_containers[1]).width() * 1.1 + 20  ;
+            }
+            $scope.left = $(_containers[0]).position().left * 0.7;
+
             $scope.$apply();
         }
 
 
         var twopages= false;
 
-        setTimeout(function(){
-             var art = $("article");
-             var _ah = 1123;
-             var _aw = 794;
-             var a = ($(window).height() - 25) / _ah ;//art.height() ;
-             art.css("transform","scale(" + a +")");
-             var _w =  _aw * a;
-             var _h = _ah * a;
 
-
-             $(".container").width(_w).height(_h);
-            $(".container#project").width(_h).height(_w);
-
-
+        $timeout(function() {
             resize();
             doBack();
-        });
+        })
+
+
         $(window).resize(resize);
 
 
@@ -134,29 +148,116 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
 
         function doBack(){
 
-            if(twopages ||  $("html").scrollTop() || $("body").scrollTop()  > $("html")[0].scrollHeight * 0.1){
-                $("#second").removeClass("back");
+            if(twopages ||  $('html').scrollTop() || $('body').scrollTop()  > $('html')[0].scrollHeight * 0.1){
+                $('#second').removeClass('back');
             }else{
-                $("#second").addClass("back");
+                $('#second').addClass('back');
             }
         }
 
-        $scope.setLang("en_US");
+        $scope.setLang('en_US');
 
-})
+    })
+    .directive('page', [ '$http','$templateCache','$compile','$timeout','$rootScope', function($http,$templateCache,$compile,$timeout,$rootScope) {
+        return {
+            restrict: 'E',
+            link: function(scope, element, attrs) {
+
+                scope.template = attrs.template;
+                var articles = [];
+
+                var _ah = 1123, _aw = 794,
+                    a = ($(window).height() - 25) / 1123 ,
+                    _w =  _aw * a, _h = _ah * a;
+
+                function createPage(){
+                    var $article = $("<article>");
+                    var $container = $("<div>").addClass("container").append($article).width(_w).height(_h);
+                    $article.css('transform','scale(' + a +')');
+
+                    if(articles.length){
+                        var $last = $(articles[articles.length - 1]).parent();
+                        $container.attr('class', $last.attr('class'));
+                        $last.after($container);
+                    }else{
+
+                        $container.attr("id",element.attr("id"));
+                        $container.addClass(element.attr("class"));
+                        element.replaceWith($container);
+                    }
+                    articles.push($article[0]);
+                    return $article;
+                }
+
+                function rearrangeAll(){
+                    for(var i = 1; i < articles.length; i++){
+                        var $article = $(articles[i]);
+                        $(articles[0]).append($article.children());
+                        $($article.parent()).remove();
+                    }
+                    articles.length = 1;
+                    rearrange(articles[0]);
+                }
+
+                function rearrange(article){
+                    var $article = $(article);
+
+                    var _h = $article.innerHeight() * a;
+                    var _children = $article.children();
+                    var _new_page;
+                    _children.each(function(){
+                        if(_new_page){
+                            _new_page.append($(this));
+                            return;
+                        }
+                        var _cel = $(this);
+                        var _top = _cel.position().top;
+                        var _elh = _cel.height();
+                        if(_top + _elh > _h){
+                            _new_page = createPage();
+                            _new_page.append($(this));
+                        }
+                    });
+                    if(_new_page){
+                        rearrange(_new_page);
+                    }
+                }
+
+                createPage();
+
+
+                $http.get(attrs.template, {
+                    cache: $templateCache
+                }).then(function(result) {
+                    var $compiled = $compile(result.data)(scope);
+                    $(articles[0]).append($compiled);
+                });
+
+                if(attrs.rearrange !== undefined){
+                    $rootScope.$on('image:loaded',function(){
+                        rearrangeAll();
+                    });
+
+                    scope.$on('update',function(){
+                        $timeout(rearrangeAll);
+                    })
+                }
+            }
+        }
+    }])
     .directive('imgPreload', ['$rootScope', function($rootScope) {
         return {
             restrict: 'A',
             scope: {
                 ngSrc: '@',
-                onLoad: "&"
+                onLoad: '&'
             },
             link: function(scope, element, attrs) {
                 scope.spinner = $('<i class="fa fa-spinner fa-pulse">');
                 element.addClass('fade');
 
                 element.on('load', function() {
-                    // console.log("> add fade in class to...", element);
+                    // console.log('> add fade in class to...', element);
                     element.addClass('in');
                     scope.spinner.remove();
                     if(attrs.onLoad){
@@ -165,6 +266,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                         }
                         scope.onLoad({ $data: $data });
                     }
+                    $rootScope.$emit('image:loaded');
                     scope.$apply();
                 }).on('error', function() {
                     scope.spinner.remove();
@@ -172,8 +274,8 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                 });
 
                 scope.$watch('ngSrc', function(newVal) {
-                    if(newVal == undefined || newVal == ""){
-                        element.attr("src", "");
+                    if(newVal == undefined || newVal == ''){
+                        element.attr('src', '');
                         if(attrs.onLoad){
                             var $data = {
                                 image: element[0]
@@ -185,7 +287,7 @@ angular.module('app', ['pascalprecht.translate','ngSanitize'], function ($transl
                         element.removeClass('in');
                         scope.spinner.insertAfter(element);
                     }
-                    // console.log("> remove fade in class to...", newVal, element);
+                    // console.log('> remove fade in class to...', newVal, element);
                 });
             }
         };

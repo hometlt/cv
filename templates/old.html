@@ -1,80 +1,65 @@
-<div class="old">
-    <div class="layout layout-row">
-        <div flex="flex flex-70">
-            <h1>{{data.name}}</h1>
-            <h2>{{data.title}}</h2>
-            <p>{{data.prompt}}</p>
+<div class="layout layout-row">
+    <div flex="flex flex-70">
+        <h1>{{data.name}}</h1>
+        <h2>{{data.title}}</h2>
+        <p>{{data.prompt}}</p>
 
-        </div>
-        <div flex="flex flex-30">
-            <img class="avatar" ng-src="{{data.avatar}}"/>
-        </div>
     </div>
-
-    <section class="info"  id="contacts">
-        <h2>{{'contacts'|translate}}</h2>
-        <div ng-repeat="info in data.contacts">
-            <dt>{{info.title}}</dt><dd>{{info.value}}</dd>
-        </div>
-    </section>
-
-    <div style="clear:both"></div>
-    <section >
-        <h2>{{'about'|translate}}</h2>
-        <a ng-repeat="info in data.info"  ng-href="{{info.href}}">
-            <dt>{{info.dt}}</dt>
-            <dd ng-bind="info.value"></dd>
-        </a>
-    </section>
-
-    <section>
-        <h2>{{'education'|translate}}</h2>
-        <ul ng-repeat="job in data.edus" layout="row" class="job">
-
-            <li>{{job.company}} / {{job.title}}
-                        <span class="period">
-                            <time datetime="{{job.begin}}">{{job.begin.getFullYear()}}</time>
-                            <span ng-if="job.begin.getFullYear() != job.end.getFullYear()"> -
-                                <time datetime="{{job.end}}">{{job.end.getFullYear()}}</time>
-                            </span>
-                        </span>
-                <br/>{{job.job_description}}
-            </li>
-
-        </ul>
-    </section>
-
-    <div style="display: none"> English:	advanced (participated in youth exchange programs, AIESEC, EVS, Work and Travel USA)
-        Russian	native
-
-        Front-end Development	Experienced in HTML5, cross-browser compatible CSS , LESS , Javascript.
-        jQuery and AngularJS.
-        frameworks:  SVG (RaphaelJS), Canvas (EaselJS, KineticJS, FabricJS), WebGL (ThreeJS).
-
-        Back-End Development	PHP, NodeJS.
-        Some experience with MEAN stack, SailsJS , Angular-Meteor.
-
-        Software Development	Qt (Cross platform development for PC, Android and iOS)
-        С++, Java, OpenGL
-        related skills	Photoshop, Corel Draw</div>
-
-    <section id="skills">
-        <h2>{{'strong'|translate}}</h2>
-        <!--<p>My strongesst skills are :-->
-            <!--<span ng-repeat="skill in data.strong">{{skill.title}}<span ng-if="!$last">,</span></span>.-->
-        <!--</p>-->
-        <div ng-bind-html="data.strong_description"></div>
-        <h2>{{'weak'|translate}}</h2>
-        <!--<p>Other skills are :-->
-            <!--<span ng-repeat="skill in data.weak">{{skill.title}}<span ng-if="!$last">,</span></span>.-->
-        <!--</p>-->
-        <div ng-bind-html="data.weak_description"></div>
-    </section>
-
-    <section>
-        <h2>{{'interests'| translate}}</h2>
-        <p ng-repeat="info in data.interests">
-                {{info.dt}}{{info.value}}
-        </p>
-    </section>
+    <div flex="flex flex-30">
+        <img class="avatar" ng-src="{{data.avatar}}"/>
+    </div>
 </div>
+
+<section class="info" id="contacts">
+    <h2>{{'contacts'|translate}}</h2>
+    <div ng-repeat="info in data.contacts">
+        <dt>{{info.title}}</dt>
+        <dd>{{info.value}}</dd>
+    </div>
+</section>
+
+<div style="clear:both"></div>
+<section>
+    <h2>{{'about'|translate}}</h2>
+    <a ng-repeat="info in data.info" ng-href="{{info.href}}">
+        <dt>{{info.dt}}</dt>
+        <dd ng-bind="info.value"></dd>
+    </a>
+</section>
+
+<section>
+    <h2>{{'education'|translate}}</h2>
+    <ul ng-repeat="job in data.edus" layout="row" class="job">
+
+        <li>{{job.company}} / {{job.title}}
+            <span class="period">
+                        <time datetime="{{job.begin}}">{{job.begin.getFullYear()}}</time>
+                        <span ng-if="job.begin.getFullYear() != job.end.getFullYear()"> -
+                            <time datetime="{{job.end}}">{{job.end.getFullYear()}}</time>
+                        </span>
+                    </span>
+            <br/>{{job.job_description}}
+        </li>
+
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>{{'strong'|translate}}</h2>
+    <!--<p>My strongesst skills are :-->
+    <!--<span ng-repeat="skill in data.strong">{{skill.title}}<span ng-if="!$last">,</span></span>.-->
+    <!--</p>-->
+    <div ng-bind-html="data.strong_description"></div>
+    <h2>{{'weak'|translate}}</h2>
+    <!--<p>Other skills are :-->
+    <!--<span ng-repeat="skill in data.weak">{{skill.title}}<span ng-if="!$last">,</span></span>.-->
+    <!--</p>-->
+    <div ng-bind-html="data.weak_description"></div>
+</section>
+
+<section>
+    <h2>{{'interests'| translate}}</h2>
+    <p ng-repeat="info in data.interests">
+        {{info.dt}}{{info.value}}
+    </p>
+</section>

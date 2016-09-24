@@ -2,17 +2,17 @@
     "name": "Ponomarev Denis",
     "avatar": "images/avatar.jpg",
     "title": "Front-End Web Developer",
-    "prompt": " I am a front-end developer with about 4 years of experience in web development. During last years I developed a number of web sites and applications using latest web standarts. This is what I do and what am I like to do.",
-
+    "prompt": " I am a front-end developer with more then 5 years of experience in web development. During last years I developed a number of web sites and applications using latest web standarts. This is what I do and what am I like to do.",
+    "blockquote": "when others failed,<br/> we take the stage!",
+    "moto": "High Level Web-Development",
 
     "strong_description": [
       "My strongest skills are <b>HTML5</b>, <b>CSS3</b> and <b>javascript</b>. I prefer to use <b>AngularJS</b>, <b>LESS</b> and <b>MongoDB</b>/<b>NodeJS</b> or frameworks like <b>Angular-Meteor</b> in my applications.",
       "I worked a lot with enchanced HTML5 graphics (presentations, schemes, charts etc). I used <b>RaphaelJS</b> for SVG; <b>EaselJS</b>, <b>KineticJS</b>, <b>FabricJS</b> for CANVAS; <b>ThreeJS</b> for WebGL.",
-      "I developed cross-browser and cross-platform web applications, with modern features and and polyfills for old and mobile browsers (Android, iOS, IE8). Expirienced with creating mobile apps packaged through <b>PhoneGap</b>."
+      "I developed cross-browser cross-platform web applications, with modern features and and polyfills for old and mobile browsers (Android, iOS, IE8). Expirienced with creating mobile apps packaged through <b>PhoneGap</b>."
     ],
     "weak_description": [
-      "Before i set priority on Web FrontEnd i mostly worked on <b>Qt</b>. Created Linux/Windows/Android applications.",
-      "Finished different programming courses."
+      "Before i set priority on Web FrontEnd i mostly worked on <b>Qt</b>. Created Linux/Windows/Android applications."
     ],
     "info": {
       "adress": {
@@ -24,7 +24,7 @@
       },
       "birth": {
         "dt": "Birth Date", 
-        "value": "9 Jan 1991 (24 years)"},
+        "value": "9 Jan 1991 (25 years)"},
       "marital": {
         "dt": "Marital Status",
         "value": "single"}
@@ -36,11 +36,15 @@
       },
       "volunteer": {
         "icon": "volunteer",
-        "value": "I`ve been a participant in different youth exchange programs, organized events with foreign volunteers."
+        "value": "I`ve been a participant in different youth international exchange programs, organized events with foreign volunteers."
+      },
+      "bicycle": {
+        "icon": "fa-bicycle",
+        "value": "I like active sports, Gym, Cycling and Climbing."
       },
       "fire": {
         "icon": "fire",
-        "value": "I like Cycling and climbing. As a member of trickers group I perform with fire-show."
+        "value": "I perform with fire-show with trickers and stuntmen."
       },
       "smoke": {
         "icon": "smoke",
@@ -67,18 +71,21 @@
     },
     "contacts": {
       "email": {
+        "card": true,
         "icon": "fa-envelope",
         "title": "email",
         "value": "ponomarevtlt@gmail.com",
         "href": "mailto:ponomarevtlt@gmail.com"
       },
       "skype": {
+        "card": true,
         "icon": "fa-skype",
         "title": "skype",
-        "value": "den.ponomarev",
+        "value": "Skype: den.ponomarev",
         "href": "skype:den.ponomarev?call"
       },
       "whatsapp": {
+        "card": true,
         "icon": "fa-whatsapp",
         "title": "whatsapp",
         "value": "+7-927-020-3657",
@@ -88,47 +95,55 @@
         "icon": "fa-facebook-square",
         "title": "facebook",
         "value": "fb.com/hometlt",
-        "href": "fb.com/hometlt"
+        "href": "//fb.com/hometlt"
       },
       "github": {
         "icon": "fa-github-square",
         "title": "github",
         "value": "github.com/hometlt",
-        "href": "github.com/hometlt"
+        "href": "//github.com/hometlt"
       },
       "linkedin": {
         "icon": "fa-linkedin-square",
         "title": "linkedin",
         "value": "linkedin.com/in/ponomarevtlt",
-        "href": "linkedin.com/in/ponomarevtlt"
+        "href": "//linkedin.com/in/ponomarevtlt"
+      },
+      "upwork": {
+        "icon": "icon-upwork",
+        "title": "whatsapp",
+        "value": "UpWork: Denis Ponomarev",
+        "href": "//goo.gl/Bx1s6O"
       }
     },
     "jobs": {
       "upwork": {
-        "begin": "May 2015",
-        "company": "Free-lance",
-        "title": "Web Frontend Programmer",
+        "begin": "1 May 2015",
+        "company": "UpWork",
+        "href": "//goo.gl/Bx1s6O",
+        "href_title": "upwork.com",
+        "title": "Web Frontend Programmer (Freelancer)",
         "job_description": "HTML5 applications based on AngularJS/ NodeJS stack.",
         "skills": ["angular", "html5", "css3", "canvas", "nodejs"]
       },
       "inteduca": {
-        "begin": "Jan 2014",
-        "end": "May 2015",
+        "begin": "1 Jan 2014",
+        "end": "1 May 2015",
         "company": "Inteduca",
         "city": "Moscow",
-        "href": "http://www.levellab.ru",
-        "href_title": "www.levellab.ru",
+        "href": "//www.levellab.ru",
+        "href_title": "levellab.ru",
         "title": "Web Frontend Programmer",
         "company_description": "'Inteduca' creates tools and educational games. Clients includes: F  Russia,  Megafon, Canon Russia,  e t.c.",
         "job_description": "Worked with AngularJS applications for Pepsico, Canon, Palmolive etc.",
         "skills": ["html5", "angular", "canvas"]
       },
       "gamesinedu": {
-        "begin": "Feb 2012",
-        "end": "Aug 2013",
+        "begin": "1 Feb 2012",
+        "end": "1 Aug 2013",
         "company": "GamesInEdu",
         "city": "Moscow",
-        "href": "http://gamesinedu.rane.ru",
+        "href": "//gamesinedu.rane.ru",
         "href_title": "gamesinedu.rane.ru",
         "title": "Web Frontend Programmer",
         "company_description": "Clients include:  Skolkovo Moscow School of Management,  Rosatom Nuclear Energy State Corporation,  Russian Presidential Academy of National Economy and Public Administration",
@@ -136,37 +151,37 @@
         "skills": ["svg", "canvas", "php"]
       },
       "brightstudio": {
-        "begin": "Sep 2011",
-        "end": "Dec 2011",
+        "begin": "1 Sep 2011",
+        "end": "1 Dec 2011",
         "company": "Bright Studio",
         "city": "Togliatty",
-        "href_title": "www.brightstudio.ru",
-        "href": "http://www.brightstudio.ru",
+        "href_title": "brightstudio.ru",
+        "href": "//www.brightstudio.ru",
         "title": "Web Programmer",
         "company_description": "",
         "job_description": "I tried myself in web design and development creating websites running on PHP and UMI-CMS.",
         "skills": ["php","umi"]
       },
       "dkc": {
-        "begin": "Sep 2011",
-        "end": "Dec 2011",
+        "begin": "1 Sep 2011",
+        "end": "1 Dec 2011",
         "company": "DKC Russia",
         "city": "Togliatty",
-        "href_title": "www.dkc.ru",
-        "href": "http://www.dkc.ru",
+        "href_title": "dkc.ru",
+        "href": "//www.dkc.ru",
         "title": "Qt/C++ Software Developer",
         "company_description": "KC works under its mission – to provide international customers by hi-tech products for electrical installations.",
         "job_description": "I Developed Fix Combitech 2 software using Qt/C++ and MySQL/SQLite.",
         "skills": ["qt", "mysql"]
       },
       "polad": {
-        "begin": "Jun 2009",
-        "end": "Aug 2009",
+        "begin": "1 Jun 2009",
+        "end": "1 Aug 2009",
         "company": "Polad",
         "hide": true,
         "city": "Togliatty",
-        "href_title": "www.polad.ru",
-        "href": "http://www.polad.ru",
+        "href_title": "polad.ru",
+        "href": "//www.polad.ru",
         "title": "System Administrator",
         "company_description": "KC works under its mission – to provide international customers by hi-tech products for electrical installations.",
         "job_description": "I Developed Fix Combitech 2 software using Qt/C++ and MySQL/SQLite."
@@ -174,15 +189,15 @@
     },
     "edus": {
       "tltsu": {
-        "begin": "Jan 2008",
-        "end": "May 2013",
+        "begin": "1 Jan 2008",
+        "end": "1 May 2013",
         "company": "TLTSU",
         "city": "Togliatty",
-        "href": "http://tltsu.ru",
+        "href": "//tltsu.ru",
         "href_title": "tltsu.ru",
         "title": "Specialist of Mathematics and Information Technology",
         "company_description": "Faculty of Mathematics, physics and IT",
-        "job_description": "Togliatty State University, 5 years. Diploma Supplement",
+        "job_description": "Togliatty State University. Diploma Supplement",
         "skills": ["cpp", "mysql", "opengl"]
       },
       "ncedu": {
@@ -190,7 +205,7 @@
         "end": "2011",
         "company": "NetCracker",
         "city": "Togliatty",
-        "href": "http://tlt.ncedu.ru",
+        "href": "//tlt.ncedu.ru",
         "href_title": "tlt.ncedu.ru",
         "title": "Java programmer",
         "company_description": "",
@@ -210,29 +225,57 @@
     },
 
     "works": {
+      "microwork": {
+        "manager": "Andy Gough",
+        "title": "Mask editor tool",
+        "company": "UpWork",
+        "client": "Microwork",
+        "description": "Includes Magic wand/brush/lasso/linear lasso/square/circle, and other selection tools",
+        "href": "//www.microwork.io",
+        "href_title": "microwork.io",
+        "begin": "1 Feb 2016",
+        "end": "31 Apr 2016",
+        "images_full": ["microwork.1.png","microwork.2.png","microwork.3.png"],
+        "images": [{"url": "microwork.1.png" , "description":"Logotypes seletion"}, {"url": "microwork.3.png" , "description":"Mask editor tools"}]
+      },
+      "stitchcount": {
+        "manager": "Brad Matters",
+        "title": "Product customizer tool",
+        "company": "UpWork",
+        "client": "StitchCounts",
+        "description": "Product editor. Includes bezier shapes, editable curved text, curved images, image editor tool etc.",
+        "href": "//www.stitchcounts.com/",
+        "href_title": "stitchcounts.com",
+        "begin": "1 Mar 2016",
+        "end": "31 May 2016",
+        "images_full": ["stitchcount.1.png","stitchcount.2.png"],
+        "images": [{"url": "stitchcount.1.png" , "description":"Curved text/images"}, {"url": "stitchcount.2.png" , "description":"image editor"}]
+      },
       "rosatom": {
-        "title": "Nuclear plant management",
+        "title": "Nuclear plant management simulator",
         "company": "GamesInEdu",
         "client": "RosAtom",
         "description": "Simulator for Nuclear Energy State Corporation. Creating game models and UI (optimized for IE8 and iPad). Login/password 'demo/demo'",
-        "href": "http://atom2.modeus.info",
-        "begin": "Jan 2013",
-        "end": "Jul 2013",
+        "href": "//atom2.modeus.info",
+        "href_title": "atom2.modeus.info",
+        "begin": "1 Jan 2013",
+        "end": "1 Jul 2013",
         "images_full": ["image019.jpg","image021.jpg","image023.jpg","image025.jpg","image027.jpg","image029.jpg"],
         "images": [{"url": "image021.jpg" , "description":"Atom 2"}, "image029.jpg"]
       },
       "sokrat": {
-        "title": "HTML5 Scheme editor.",
+        "title": "HTML5 Scheme editor",
         "company": "GamesInEdu",
         "description": "Development of scheme render and analyzer. Application used as educational tool in management Schools. It gives task to student and ask to draw the correct scheme.",
         "skills": ["html5"],
-        "href": "http://sokrat.hometlt.ru",
-        "begin": "Sep 2012",
-        "end": "Mar 2013",
+        "href": "//sokrat.hometlt.ru",
+        "begin": "1 Sep 2012",
+        "end": "1 Mar 2013",
         "images": ["image031.jpg", "image033.jpg"],
         "images_full": ["image031.jpg","image033.jpg","image035.jpg","image037.jpg","image039.jpg","image041.jpg"]
       },
       "teacher": {
+        "hide":true,
         "title": "Simulator of Teacher",
         "company": "GamesInEdu",
         "begin": "2014",
@@ -241,11 +284,12 @@
         "images": ["image010.jpg"]
       },
       "photofieria": {
+        "hide":true,
         "title": "HTML5 Album editor.",
         "description": "Album editor is a tool to create presentations or photo albums with text and photos. It has editing tools like image filters/cropping/resizing, different borders/shapes/frames, text styling. It works also on phones and tablets.",
         "skills": ["html5", "canvas", "FabricJS"],
-        "begin": "May 2015",
-        "images": ["image043.jpg", "image045.jpg", "image047.jpg"]
+        "begin": "1 May 2015",
+        "images": ["album1.png", "album2.png"]
       },
       "planogram": {
         "title": "Planogram editor",
@@ -254,12 +298,12 @@
         "begin": "2014",
         "end": "2014",
         "description": "tool for merchandising simulator.  Interactive visual representations of a store's products.",
-        "images": ["image003.jpg"]
+        "images": ["image003.jpg","merch.jpg"]
       },
       "dialogs": {
         "title": "Pepsico Interactive Tours",
         "company": "Inteduca",
-        "href": "http://sb.hometlt.ru/",
+        "href": "//sb.hometlt.ru",
         "clients": ["Pepsico", "Megafon", "Canon", "Sberbank"],
         "begin": "2014",
         "end": "2014",
@@ -270,8 +314,8 @@
         "hide":true,
         "title": "Atom3 simulator: Interactive Charts",
         "company": "GamesInEdu",
-        "begin": "Jan 2014",
-        "end": "Mar 2014",
+        "begin": "1 Jan 2014",
+        "end": "1 Mar 2014",
         "description": "Creating user interface elements",
         "images": ["image011.jpg", "image013.jpg"]
       },
@@ -279,21 +323,22 @@
         "hide":true,
         "title": "Simulator \"Small and medium business\"",
         "company": "GamesInEdu",
-        "begin": "Aug 2012",
-        "end": "Apr 2013",
-        "href": "http://smb.modeus.info",
+        "begin": "1 Aug 2012",
+        "end": "1 Apr 2013",
+        "href": "//smb.modeus.info",
         "description": "crating game models and user interface",
         "images": ["image015.jpg", "image017.jpg"]
       },
       "fc2": {
         "title": "Fix Combitech 2",
         "company": "DKC",
-        "href": "http://www.dkc.ru/en/support/software/",
+        "href": "//www.dkc.ru/en/support/software",
+        "href_title": "dkc.ru/en/support/software",
         "description": "FIX Combitech 2 is used by engineers in Russia and Ukraine to calculate accessories and fasteners metal trays.",
         "details": "Features:<ul><li>Save and load projects, Export to Excel, Word and XML</li><li>local and network databases.</li><li>Self- update system</li></ul>",
         "skills": ["cpp", "Qt", "MySQL", "SQLite"],
-        "begin": "Sep 2012",
-        "end": "Mar 2013",
+        "begin": "1 Sep 2012",
+        "end": "1 Mar 2013",
         "images": ["image049.jpg", "image050.jpg"]
       },
       "mwx": {
@@ -302,8 +347,8 @@
         "description": "Extended version of the popular video-game \"Minesweeper\". Ported to Android, support external modifications, 3d scenes.",
         "details": "",
         "skills": ["cpp", "Qt", "OpenGL"],
-        "begin": "Jan 2011",
-        "end": "May 2011",
+        "begin": "1 Jan 2011",
+        "end": "1 May 2011",
         "images": ["image055.jpg", "image061.jpg"],
         "images_full": ["image053.jpg","image055.jpg","image057.jpg","image059.jpg","image061.jpg"]
       },
@@ -321,8 +366,8 @@
       "autorodeo":{
         "hide": true,
         "title": "AutoRodeo and Fire show",
-        "href":   "http://new.kaskadery63.ru/",
-        "description": "Trickers «Togliatty AutoRodeo» and Fire show group «Amon-Ra».auto moto show from my city and our local fire show group. Also, my hobbies. http://fire.hometlt.ru",
+        "href":   "new.kaskadery63.ru",
+        "description": "Trickers «Togliatty AutoRodeo» and Fire show group «Amon-Ra».auto moto show from my city and our local fire show group. Also, my hobbies. fire.hometlt.ru",
         "details":    "",
         "skills": ["HTML","CSS","UMI-CMS","PHP"],
         "begin":  "2012",

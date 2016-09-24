@@ -1,0 +1,61 @@
+
+<section class="card-container animated" ng-class="{flipped : cardToggled}" ng-click="cardToggled = !cardToggled">
+    <div class="card">
+        <figure class="front">
+            <pre class="bgcode">
+loadSVGFromURL: function(url, callback, reviver,callback_error) {
+    url = url.replace(/^\n\s*/, '').trim();
+    svgCache.has(url, function (hasUrl) {
+        if (hasUrl) {
+            svgCache.get(url, function (value) {
+                var enlivedRecord = _enlivenCachedObject(value);
+                callback(enlivedRecord.objects, enlivedRecord.options);
+            });
+        }
+        else {
+            new fabric.util.request(url, {
+                method: 'get',
+                onComplete: onComplete
+            });
+        }
+    });
+            </pre>
+            <div class="gradient"></div>
+            <div class="content">
+
+                <img class="logo" src="images/logo.png">
+                <h2 ng-bind-html="data.moto"></h2>
+                <a href="http://www.studio42.ru">www.studio42.ru</a>
+            </div>
+        </figure>
+        <figure class="back">
+            <div class="gradient2"></div>
+            <img class="bg" src="http://codershere.likesyou.org/img/10m.jpg">
+
+            <div class="content">
+                <div class="left">
+
+                    <div class="team-leader  wow fadeInDown delay-06s animated" style="visibility: visible; animation-name: fadeInDown;">
+                        <div class="team-leader-shadow"><a href="#"></a></div>
+                        <!--<img src="http://codershere.likesyou.org/img/team-leader-pic2.jpg" alt="">-->
+                        <div class="avatar"></div>
+                        <!--src="http://codershere.likesyou.org/img/team-leader-pic2.jpg" alt="">-->
+                    </div>
+                </div>
+                <div class="right">
+                    <h3>{{data.name}}</h3>
+                    <hr/>
+                    <h4>{{data.title}}</h4>
+                    <blockquote ng-bind-html="data.blockquote"></blockquote>
+
+                    <div class="contact-info-box phone clearfix">
+                        <a ng-repeat="info in data.contacts" ng-href="{{info.href}}" ng-if="info.card">
+                            <i class="fa {{info.icon}}" title="{{info.title}}"></i>
+                            {{info.value}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </figure>
+    </div>
+</section>
