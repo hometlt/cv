@@ -6,6 +6,12 @@
     "blockquote": "when others failed,<br/> we take the stage!",
     "moto": "High Level Web-Development",
 
+    "aiesec_description": [
+      "No bad habits. Fast learning, Hardworking and Responsible. Able to work without assistance and as team member.",
+      "In free time perform with fire-show and trickers groups. Taking active part in university live . Taking part in VIII international festival of chorus art “singing world” in Saint Petersburg with students’ choir. ",
+      "I like sports, such as cycling, swimming, track and field. Take first place in the university athletic competitions for freshmen in university",
+      "Developing educational games and programs."
+    ],
     "strong_description": [
       "My strongest skills are <b>HTML5</b>, <b>CSS3</b> and <b>javascript</b>. I prefer to use <b>AngularJS</b>, <b>LESS</b> and <b>MongoDB</b>/<b>NodeJS</b> or frameworks like <b>Angular-Meteor</b> in my applications.",
       "I worked a lot with enchanced HTML5 graphics (presentations, schemes, charts etc). I used <b>RaphaelJS</b> for SVG; <b>EaselJS</b>, <b>KineticJS</b>, <b>FabricJS</b> for CANVAS; <b>ThreeJS</b> for WebGL.",
@@ -24,10 +30,22 @@
       },
       "birth": {
         "dt": "Birth Date", 
-        "value": "9 Jan 1991 (25 years)"},
+        "value": "9 Jan 1991 (25 years)"
+      },
       "marital": {
         "dt": "Marital Status",
-        "value": "single"}
+        "value": "single"
+      },
+      "driverlicense": {
+        "category": ["aiesec"],
+        "dt": "Driver License",
+        "value": "B"
+      },
+      "nationality": {
+        "category": ["aiesec"],
+        "dt": "Nationality",
+        "value": "Russian"
+      }
     },
     "interests": {
       "travel": {
@@ -40,7 +58,7 @@
       },
       "bicycle": {
         "icon": "fa-bicycle",
-        "value": "I like active sports, Gym, Cycling and Climbing."
+        "value": "I like active sports, Gym, Cycling, Snowboarding."
       },
       "fire": {
         "icon": "fire",
@@ -70,6 +88,16 @@
       "photoshop": {"icon": "photoshop", "title": "PhotoShop"}
     },
     "contacts": {
+      "home": {
+        "hide": true,
+        "title":  "Home Phone",
+        "value":	"+7(8482)350-950"
+      },
+      "icq": {
+        "hide": true,
+        "title": "icq",
+        "value": "1-256-215"
+      },
       "email": {
         "card": true,
         "icon": "fa-envelope",
@@ -91,6 +119,12 @@
         "value": "+7-927-020-3657",
         "href": "tel:+79270203657"
       },
+      "vk": {
+        "icon": "fa-vk",
+        "title": "vk",
+        "value": "vk.com/visce",
+        "href": "//vk.com/visce"
+      },
       "facebook": {
         "icon": "fa-facebook-square",
         "title": "facebook",
@@ -98,6 +132,7 @@
         "href": "//fb.com/hometlt"
       },
       "github": {
+        "category": "web",
         "icon": "fa-github-square",
         "title": "github",
         "value": "github.com/hometlt",
@@ -110,6 +145,7 @@
         "href": "//linkedin.com/in/ponomarevtlt"
       },
       "upwork": {
+        "category": "web",
         "icon": "icon-upwork",
         "title": "whatsapp",
         "value": "UpWork: Denis Ponomarev",
@@ -135,7 +171,7 @@
         "href_title": "levellab.ru",
         "title": "Web Frontend Programmer",
         "company_description": "'Inteduca' creates tools and educational games. Clients includes: F  Russia,  Megafon, Canon Russia,  e t.c.",
-        "job_description": "Worked with AngularJS applications for Pepsico, Canon, Palmolive etc.",
+        "job_description": "Created frontend part of educational systems for big international companies like Pepsico, Canon, Palmolive etc.",
         "skills": ["html5", "angular", "canvas"]
       },
       "gamesinedu": {
@@ -174,7 +210,7 @@
         "job_description": "I Developed Fix Combitech 2 software using Qt/C++ and MySQL/SQLite.",
         "skills": ["qt", "mysql"]
       },
-      "polad": {
+      "polad2": {
         "begin": "1 Jun 2009",
         "end": "1 Aug 2009",
         "company": "Polad",
@@ -183,8 +219,67 @@
         "href_title": "polad.ru",
         "href": "//www.polad.ru",
         "title": "System Administrator",
-        "company_description": "KC works under its mission – to provide international customers by hi-tech products for electrical installations.",
-        "job_description": "I Developed Fix Combitech 2 software using Qt/C++ and MySQL/SQLite."
+        "job_description": "Control POLAD local network. Providing help to users. Jobbing out of fix computers."
+      },
+      "polad1": {
+        "company": "Polad",
+        "begin": "1 Jul 2007",
+        "end": "1 Aug 2007",
+        "hide": true,
+        "title": "General worker",
+        "description": "Differnet work in plastic factory. Checking finish goods for defects, packing, moving and others"
+      },
+      "Shans": {
+        "company": "Youth employment center “Shans”",
+        "begin": "1 May 2005",
+        "end": "1 Aug 2007",
+        "hide": true,
+        "title": "General worker",
+        "description": "Keeping garden clear , painting, simple mounting work"
+      }
+    },
+    "aiesec": {
+      "EVS" : {
+        "description" : "preparation of the seminar for 27 coordinators from western europe and Caucasus"
+      },
+      "volganteering" : {
+        "description" : "coordinate volunteering projects and manage volunteers from europe in the organisation."
+      },
+      "aiesec1" : {
+        "begin": "24.01.2013",
+        "end": "31.03.2013",
+        "company": "AIESEC TOGLIATTI",
+        "title": "Team Member off-line promo"
+      },
+      "aiesec2" : {
+        "begin": "18.09.2012",
+        "end": "31.12.2012",
+        "company": "AIESEC TOGLIATTI",
+        "title": "OGX Team Member"
+      },
+      "aiesec3" : {
+        "begin": "26.06.2012",
+        "end": "15.09.2012",
+        "company": "AIESEC TOGLIATTI",
+        "title": "Team Member International Summer"
+      }
+    },
+    "trainings": {
+      "aiesec": {
+        "title": "AIESEC Introduction Seminar",
+        "begin": "2012"
+      },
+      "EastWestEVS": {
+        "title": "EastWestEVS",
+        "begin": "18 Mar 2013",
+        "end": "24 Mar 2013",
+        "description": "TC 'EastWestEVS' aims at developing competences of EVS projects coordinators and mentors in cooperation between Programme Countries and EECA region. Lviv, Ukraine"
+      },
+      "vfe" : {
+        "title": "Volunteering for Empowerment",
+        "description": "ning course aims to train youth leaders and project coordinators to improve organisational capacities in managing local and international volunteering projects",
+        "begin": "12 Jun 2013",
+        "end": "20 Jun 2013"
       }
     },
     "edus": {
@@ -223,8 +318,28 @@
         "skills": ["cpp"]
       }
     },
-
     "works": {
+      "oracul": {
+        "hide": true,
+        "title": "Nuclear plant management simulator",
+        "href": "//oracul.hometlt.ru",
+        "description": "home page of TV-show “битва экстрасенсов” (battle of Paranormalists) participant",
+        "images": ["oracul.jpg"]
+      },
+      "psk": {
+        "hide": true,
+        "title": "Проском.рф",
+        "href": "//Проском.рф",
+        "description": " industry, shop",
+        "images": ["psk.jpg"]
+      },
+      "web": {
+        "hide": true,
+        "title": "web.hometlt.ru",
+        "href": "//web.hometlt.ru",
+        "description": " web development website",
+        "images": ["web.jpg"]
+      },
       "microwork": {
         "manager": "Andy Gough",
         "title": "Mask editor tool",
@@ -342,6 +457,7 @@
         "images": ["image049.jpg", "image050.jpg"]
       },
       "mwx": {
+        "hide": true,
         "title": "MinesWeeper Extended",
         "href": "mwx.hometlt.ru",
         "description": "Extended version of the popular video-game \"Minesweeper\". Ported to Android, support external modifications, 3d scenes.",

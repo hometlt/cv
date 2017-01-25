@@ -5,8 +5,24 @@
     right:20px;
     top: 0;
 
+    > i, >a{
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      background: #8BC88B;
+      color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 2px;
+      cursor: pointer;
+      &:hover span{
+        display: block;
+      }
+    }
 
     span{
+      display: none;
       position: absolute;
       right: 0;
       top: 100%;
@@ -18,45 +34,68 @@
         width: 30px;
       }
     }
-    #view{
-      display: inline-block;
-      width: 36px;
-      height: 36px;
-      line-height: 36px;
-      background: #8BC88B;
-      color: white;
-      border-radius: 20px;
-      overflow: hidden;
-      margin: 2px;
-      cursor: pointer;
-    }
+
     #download,
     #print{
-      display: inline-block;
-      width: 36px;
-      height: 36px;
-      line-height: 36px;
       background: #0e6dc8;
-      color: white;
-      border-radius: 20px;
-      overflow: hidden;
-      margin: 2px;
-      cursor: pointer;
+    }
+    #russian,
+    #english{
+      background-color: transparent;
+      background-size: 100%;
+      display: inline-block;
+      width:  40px;
+      height: 40px;
     }
     #english{
       background-image: url(../icons/eng.png);
-      background-size: 100%;
-      display: inline-block;
-      width:  40px;
-      height: 40px;
     }
     #russian{
       background-image: url(../icons/rus.png);
-      background-size: 100%;
-      display: inline-block;
-      width:  40px;
-      height: 40px;
     }
+  }
+
+  #preview-shadow {
+    display: table;
+    padding: 0;
+    position: fixed;
+    z-index: 111;
+    //background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    color: white;
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #preview-image {
+      width: auto;
+      height: auto;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+  }
+
+  #preview-image {
+    width: auto;
+    height: auto;
+    max-width: 100% !important;
+    max-height: 90%;
+    border: 1px solid black;
+  }
+
+  .photo-container{
+    background-color: white;
+    box-shadow: 0 0 10px 0 black;
+    width: auto;
+    padding: 21px;
+    position: relative;
+    display: inline-block;
+    max-width: 90%;
+    color: black;
+    max-height: 90%;
   }
 
   #table{
@@ -105,7 +144,7 @@
       #keyboard{
 
         height: 40%;
-        top: 20%;
+        top: 0%;
         position: relative;
         margin-left: 10%;
         right: -10%;
@@ -125,6 +164,17 @@
   }
 
   .document-view {
+    .old-look-document{
+      .container {
+        transform: translate(85%, 60%) rotate(-10deg) !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        box-shadow: 1px 1px 3px 0px;
+      }
+    }
+
+
     article {
       transform-origin: top left;
       position: relative;

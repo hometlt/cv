@@ -1,73 +1,12 @@
 <div class="modern layout layout-row">
-    <header class="flex flex-35">
-        <svg class="avatar" width="180" height="200" viewBox="0 0 560 645" xmlns="http://www.w3.org/2000/svg"
-             xlink="http://www.w3.org/1999/xlink" version="1.1">
-            <g>
-                <clipPath id="hexagonal-mask">
-                    <polygon points="270,0 0,160 0,485 270,645 560,485 560,160"/>
-                </clipPath>
-            </g>
-            <image clip-path="url(#hexagonal-mask)" height="100%" width="100%" xlink:href="{{data.avatar}}"/>
-        </svg>
-
-
-        <!--<img src="{{data.avatar}}" class="avatar">-->
-        <h1></h1>
-        <h2></h2>
-        <p></p>
-        <div>
-            <h1>{{data.name}}</h1>
-            <h2>{{data.title}}</h2>
-            <section>
-                <p>{{data.prompt}}</p>
-            </section>
-            <section>
-                <h3>{{'about'| translate}}</h3>
-                <a ng-repeat="info in data.info" ng-href="{{info.href}}">
-                    <dt>
-                        <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
-                        {{info.dt}}<span ng-if="info.dt">:</span>
-                    </dt>
-                    <dd>{{info.value}}</dd>
-                </a>
-            </section>
-            <section>
-                <h3>{{'contacts'| translate}} </h3>
-                <a ng-repeat="info in data.contacts" ng-href="{{info.href}}" target="_blank">
-                    <dt>
-                        <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
-                        {{info.dt}}
-                    </dt>
-                    <dd>{{info.value}}</dd>
-                </a>
-            </section>
-            <section>
-                <h3>{{'interests'| translate}}</h3>
-                <a ng-repeat="info in data.interests" ng-href="{{info.href}}">
-                    <dt>
-                        <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
-                        {{info.dt}}
-                    </dt>
-                    <dd ng-bind="info.value"></dd>
-                </a>
-
-
-                <!--<p>I have a passion for learning and will never stop to develop my personal and professional skills. I like to go to conferences for professional programmers.</p>-->
-                <!--<p>Travelling is my passion</p>-->
-                <!--<p>I`ve been a participant in different youth exchange programs, organized events with foreign volunteers.</p>-->
-                <!--&lt;!&ndash;like AIESEC and EVS&ndash;&gt;-->
-                <!--<p>I like Cycling, climbing and perform with fire show.</p>-->
-
-
-            </section>
-        </div>
-
-    </header>
+    <header class="flex flex-35"  ng-include="'templates/modern-sidebar.html'"></header>
     <main class="flex">
-        <section ng-include="'templates/expirience.html'"></section>
-        <section ng-include="'templates/education.html'"></section>
+        <h1>{{'expirience'|translate}}</h1>
+        <section expirience="data.jobs"></section>
+        <h1>{{'education'|translate}}</h1>
+        <section expirience="data.edus"></section>
+        <h1>{{'strong'|translate}}</h1>
         <section id="skills">
-            <h1>{{'strong'|translate}}</h1>
             <div class="icons">
                     <span ng-repeat="skill in data.strong">
                         <i class="fa {{skill.icon}}"></i>

@@ -8,24 +8,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <link rel="stylesheet" href="css/font-awesome.min.css" >
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" >
     <link rel='stylesheet' href='css/roboto.css'>
     <link rel="stylesheet" href="css/style.css" media="all">
     <link rel="stylesheet" href="css/screen.css" media="screen">
     <link rel="stylesheet" href="css/print.css" media="print">
     <!--<link rel="stylesheet" href="css/card.css" media="screen">-->
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-sanitize.min.js"></script>
-    <script src="js/angular-translate.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body ng-controller="ctrl" class="{{view}}-view"  ng-app="app">
     <div class="lang">
-        <!--<a href="dist/den.ponomarev.en.pdf" id="download" class="fa fa-download"></a>-->
+        <a href="dist/den.ponomarev.en.pdf" id="download" class="fa fa-file-pdf-o"></a>
         <i id="print" class="fa fa-print"     ng-click="print()" ></i>
         <i id="view" class="fa fa-binoculars" ng-click="changeView()" ></i>
+        <i id="style" class="fa fa-diamond" ng-click="changeStyle()" ></i>
         <a href="#" ng-if="lang == 'ru_RU'"   ng-click="setLang('en_US')" id="english">
             <span>Change Language<img src="images/arrow.svg"></span>
         </a>
@@ -34,34 +36,36 @@
 
     <div id="preview-shadow" ng-if="preview" ng-click="closePreview()" >
         <div>
-            <img id="preview-image" ng-src="portfolio/{{preview.url}}">
-            <p>{{preview.description}}</p>
+            <div class="photo-container">
+
+                <img id="preview-image" ng-src="portfolio/{{preview.url}}">
+                <p>{{preview.description}}</p>
+            </div>
         </div>
     </div>
 
     <div id="table">
-
         <div id="left-objects" ng-style="{width: left}">
             <img class="rotated"  src="images/notebook.png" id="notebook">
             <img class="rotated"  src="images/pencil.png" id="pencil">
         </div>
-
         <div id="right-objects" ng-style="{left: right}">
             <!--<div id="card" ng-include="'templates/card.html'"></div>-->
             <img class="rotated" src="images/coffee.png" id="coffee">
             <img class="rotated" src="images/keyboard.png" id="keyboard">
         </div>
     </div>
-    <!--<div id="documents-place">-->
 
-
-
-
-    <page data-template='templates/modern.html' id="first"></page>
-    <page data-template='templates/portfolio.html' id="second"></page>
-    <page data-template='templates/old.html' class='old' ng-if="old"></page>
-    <page data-template='templates/old-portfolio.html' rearrange class='old' ng-if="old"></page>
-    <!--<page data-template='templates/project.html' class='rotated' id="project" ng-show="showProject"></page>-->
+    <div ng-class="{'old-look-document' : style == 'oldschool'}"  ng-click="changeStyle()">
+        <div page='templates/modern.html' id="first"></div>
+        <div page='templates/aiesec.html' id="first"></div>
+        <div page='templates/modern-portfolio.html' id="second"></div>
+    </div>
+    <div ng-class="{'old-look-document' : style == 'modern'}" ng-click="changeStyle()">
+        <div page='templates/old.html' class='old'></div>
+        <div page='templates/old-portfolio.html' rearrange class='old'></div>
+    </div>
+    <div page='templates/modern-project.html' horizontal class='rotated' id="project" ng-show="showProject"></div>
 
 
 

@@ -46,9 +46,6 @@ body {
 .web-view article > div {
   height: 100%;
 }
-#preview-image {
-  box-shadow: 0px 0px 5px 1px;
-}
 .document-view article {
   height: 100%;
   background: white;
@@ -90,26 +87,6 @@ body {
 #project header h1 {
   text-align: left;
   margin: -3.5mm 0mm;
-}
-#preview-shadow {
-  display: table;
-  padding: 0;
-  position: fixed;
-  z-index: 111;
-  background-color: rgba(0, 0, 0, 0.9);
-  width: 100%;
-  height: 100%;
-  color: white;
-}
-#preview-shadow > div {
-  display: table-cell;
-  vertical-align: middle;
-}
-#preview-shadow #preview-image {
-  width: auto;
-  height: auto;
-  max-width: 90%;
-  max-height: 90%;
 }
 section {
   clear: both;
@@ -540,8 +517,8 @@ section {
   float: right;
   cursor: pointer;
   margin-right: 5px;
-  max-height: 150px;
-  max-width: 175px;
+  max-height: 145px;
+  max-width: 190px;
   border: 1px solid black;
 }
 button,
@@ -568,6 +545,11 @@ input {
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-flex-direction: row;
+}
+.flex-60 {
+  -webkit-flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
 }
 .flex-55 {
   -webkit-flex: 0 0 55%;

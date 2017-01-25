@@ -1,0 +1,13 @@
+{
+  "today"     :       "today",
+  "about"     :       "About",
+  "contacts"     :    "Contacts",
+  "interests"     :   "Interests",
+  "expirience"     :  "Work Expirience",
+  "aiesec_expirience":"AIESEC Expirience",
+  "education"     :   "Education",
+  "strong"     :      "Core Skills",
+  "weak"     :        "Other Skills",
+  "portfolio"     :   "Portfolio",
+  "more"     :        "More information, links and examples on <a href='//cv.hometlt.ru'>cv.hometlt.ru</a> or my github and linkedIn accounts."
+}

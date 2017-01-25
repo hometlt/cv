@@ -1,0 +1,12 @@
+<div class="modern layout layout-row"  ng-init="category='aiesec'">
+    <header class="flex flex-35"  ng-include="'templates/modern-sidebar.html'"></header>
+    <main class="flex">
+        <h1>{{'aiesec_expirience'|translate}}</h1>
+        <section expirience="data.aiesec"></section>
+        <section id="skills">
+            <h1>{{'strong'|translate}}</h1>
+            <p ng-repeat="row in data.aiesec_description" ng-bind-html="row"></p>
+        </section>
+    </main>
+
+</div>
