@@ -56,12 +56,12 @@
         </div>
     </div>
 
-    <div ng-class="{'old-look-document' : style == 'oldschool'}"  ng-click="changeStyle()">
+    <div ng-class="{'old-look-document' : style == 'oldschool'}"  ng-click="changeStyle('modern')">
         <div page='templates/modern.html' id="first"></div>
         <div page='templates/aiesec.html' id="first"></div>
         <div page='templates/modern-portfolio.html' id="second"></div>
     </div>
-    <div ng-class="{'old-look-document' : style == 'modern'}" ng-click="changeStyle()">
+    <div ng-class="{'old-look-document' : style == 'modern'}" ng-click="changeStyle('oldschool')">
         <div page='templates/old.html' class='old'></div>
         <div page='templates/old-portfolio.html' rearrange class='old'></div>
     </div>

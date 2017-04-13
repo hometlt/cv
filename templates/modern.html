@@ -1,7 +1,8 @@
-<div class="modern layout layout-row">
+<div class="modern layout layout-row" ng-init="category='web'">
+
     <header class="flex flex-35"  ng-include="'templates/modern-sidebar.html'"></header>
     <main class="flex">
-        <h1>{{'expirience'|translate}}</h1>
+        <h1>{{'work_expirience'|translate}}</h1>
         <section expirience="data.jobs"></section>
         <h1>{{'education'|translate}}</h1>
         <section expirience="data.edus"></section>

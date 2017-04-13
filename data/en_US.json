@@ -1,17 +1,77 @@
 {
     "name": "Ponomarev Denis",
-    "avatar": "images/avatar.jpg",
+    "avatar": "images/cam.jpg",
+
     "title": "Front-End Web Developer",
     "prompt": " I am a front-end developer with more then 5 years of experience in web development. During last years I developed a number of web sites and applications using latest web standarts. This is what I do and what am I like to do.",
     "blockquote": "when others failed,<br/> we take the stage!",
     "moto": "High Level Web-Development",
 
-    "aiesec_description": [
-      "No bad habits. Fast learning, Hardworking and Responsible. Able to work without assistance and as team member.",
-      "In free time perform with fire-show and trickers groups. Taking active part in university live . Taking part in VIII international festival of chorus art “singing world” in Saint Petersburg with students’ choir. ",
-      "I like sports, such as cycling, swimming, track and field. Take first place in the university athletic competitions for freshmen in university",
-      "Developing educational games and programs."
-    ],
+    "aiesec" : {
+      "goal": [
+        "I am an IT professinal. This year i decided to work in Amsterdam.",
+        "I already have  AIESEC and  European Voluntary Service expirirence. I orginized events, festival and cordinate the training course. Found jobs for incoming volunteers, Invited about 40 people total volunteers and coordinators. Helped others to find their interships abroad.",
+        "Have been host family for intern from Brasil:)",
+        "New knowledge, Socialization in new environment and Developing my leadership skills are my goals.",
+        "My final long-term goal is to be able to become a team leader in international IT company."
+      ],
+      "--description": [
+        "No bad habits. Fast learning, Hardworking and Responsible. Able to work without assistance and as team member.",
+        "In free time perform with fire-show and trickers groups. Taking active part in university live . Taking part in VIII international festival of chorus art “singing world” in Saint Petersburg with students’ choir. ",
+        "I like sports, such as cycling, swimming, track and field. Take first place in the university athletic competitions for freshmen in university",
+        "Developing educational games and programs."
+      ],
+      "courses": {
+        "VolunteeringForEmpowerment " : {
+          "when": "12 Jun 2013",
+          "location": "Togliatty",
+          "company":    "EVS",
+          "title":      "Volunteering for Empowerment in Togliatty, Russia",
+          "job_description": "One week project for 27 coodrinators from Europe coordinated by me. TC aims to resolve Structural and organisational problems in managing volunteer projects"
+        },
+        "EastWestEVS" : {
+          "href": "https://www.salto-youth.net/rc/eeca/activitieseeca/prevactivities/eastwestevs/eastwestevs2013/",
+          "when": "Mar 2013",
+          "location": "Lviv",
+          "company":      "EVS",
+          "title":      "East West EVS in Lviv, Ukraine",
+          "job_description": "TC aims at developing competences of EVS projects coordinators and mentors in cooperation between Programme Countries and EECA region"
+        },
+        "RUSco" : {
+          "when": "17 Apr 2012",
+          "location": "Ufa",
+          "href": "https://vk.com/rusco2012",
+          "title":      "AIESEC Russian Congress in Ufa, Russia",
+          "company":      "AIESEC",
+          "job_description": "RUSco - the biggest national conferences of AIESEC Russia"
+        },
+        "aiesecIS" : {
+          "href": "https://vk.com/aiesec_samara_is_autumn",
+          "when": "17 Mar 2012",
+          "location": "Samara",
+          "company":   "AIESEC",
+          "title":      "AIESEC Introduction Seminar in Samara, Russia",
+          "job_description": "Outgoing study conference for newcomers."
+        }
+      },
+      "expirience": {
+        "EVS" : {
+          "begin": "2012",
+          "end": "Jun 2013",
+          "company":      "EVS",
+          "title":        "Project coordinator",
+          "job_description" : "Preparation of the seminar for 27 coordinators from western europe and Caucasus \n Coordinate volunteering projects and manage volunteers from europe in the organisation. \n Mentoring Volunteers "
+        },
+        "aiesec" : {
+          "begin": "1 Mar 2012",
+          "end": "1 Mar 2013",
+          "company": "AIESEC",
+          "location": "Togliatty",
+          "title": "Team Member programm",
+          "job_description": "Team Member off-line promo \n OGX Team Member \n Team Member International Summer. \n Festival of Cultures Co-orginizer"
+        }
+      }
+    },
     "strong_description": [
       "My strongest skills are <b>HTML5</b>, <b>CSS3</b> and <b>javascript</b>. I prefer to use <b>AngularJS</b>, <b>LESS</b> and <b>MongoDB</b>/<b>NodeJS</b> or frameworks like <b>Angular-Meteor</b> in my applications.",
       "I worked a lot with enchanced HTML5 graphics (presentations, schemes, charts etc). I used <b>RaphaelJS</b> for SVG; <b>EaselJS</b>, <b>KineticJS</b>, <b>FabricJS</b> for CANVAS; <b>ThreeJS</b> for WebGL.",
@@ -29,20 +89,23 @@
         "dt": "Adress"
       },
       "birth": {
-        "dt": "Birth Date", 
+        "dt": "Birth Date",
         "value": "9 Jan 1991 (25 years)"
       },
       "marital": {
+        "hide": true,
+        "category": "no",
         "dt": "Marital Status",
         "value": "single"
       },
       "driverlicense": {
-        "category": ["aiesec"],
+        "hide": true,
+        "category": "no",
         "dt": "Driver License",
         "value": "B"
       },
       "nationality": {
-        "category": ["aiesec"],
+        "category": "aiesec",
         "dt": "Nationality",
         "value": "Russian"
       }
@@ -58,7 +121,7 @@
       },
       "bicycle": {
         "icon": "fa-bicycle",
-        "value": "I like active sports, Gym, Cycling, Snowboarding."
+        "value": "I like active sports, Cycling, Snowboarding."
       },
       "fire": {
         "icon": "fire",
@@ -238,32 +301,7 @@
         "description": "Keeping garden clear , painting, simple mounting work"
       }
     },
-    "aiesec": {
-      "EVS" : {
-        "description" : "preparation of the seminar for 27 coordinators from western europe and Caucasus"
-      },
-      "volganteering" : {
-        "description" : "coordinate volunteering projects and manage volunteers from europe in the organisation."
-      },
-      "aiesec1" : {
-        "begin": "24.01.2013",
-        "end": "31.03.2013",
-        "company": "AIESEC TOGLIATTI",
-        "title": "Team Member off-line promo"
-      },
-      "aiesec2" : {
-        "begin": "18.09.2012",
-        "end": "31.12.2012",
-        "company": "AIESEC TOGLIATTI",
-        "title": "OGX Team Member"
-      },
-      "aiesec3" : {
-        "begin": "26.06.2012",
-        "end": "15.09.2012",
-        "company": "AIESEC TOGLIATTI",
-        "title": "Team Member International Summer"
-      }
-    },
+
     "trainings": {
       "aiesec": {
         "title": "AIESEC Introduction Seminar",

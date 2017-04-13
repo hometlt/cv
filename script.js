@@ -19,6 +19,43 @@ angular
         }
     })
     .controller('ctrl',function($scope,$translate,$http,$timeout){
+
+      /**
+       *
+       * @param object
+       * @param criteria - выполнять функцию со всеми объектами
+       */
+        $scope.recoursive = function(object, criteria) {
+          var readed = [];
+          if (!object) return;
+          return (function sub_recoursive(object) {
+            if (readed.indexOf(object) != -1) {
+              return;
+            }
+            readed.push(object);
+
+
+            if (object instanceof Array) {
+              for (var prop = object.length; prop--;) {
+                if (object[prop] && (object[prop].constructor == Object || object[prop].constructor == Array)) {
+                  sub_recoursive(object[prop]);
+                } else {
+                  var break_ = criteria(prop, object[prop], object);
+                }
+              }
+            } else {
+              for (var prop in object) {
+                if (object[prop] && (object[prop].constructor == Object || object[prop].constructor == Array)) {
+                  sub_recoursive(object[prop]);
+                } else {
+                  var break_ = criteria(prop, object[prop], object);
+                }
+              }
+            }
+          })(object);
+        };
+
+
         $scope.lang = '';
         $scope.view = 'document';
         $scope.style = 'modern';
@@ -48,8 +85,12 @@ angular
         $scope.previewImage = function(img) {
             $scope.preview = img.url ? img : {url: img};
         };
-        $scope.changeStyle = function() {
-            $scope.style = ($scope.style == 'modern' )? 'oldschool' : 'modern';
+        $scope.changeStyle = function(newStyle) {
+          if($scope.style == newStyle){
+            return;
+          }else{
+            $scope.style = newStyle;
+          }
         };
         $scope.changeView = function() {
             $scope.view = ($scope.view == 'document' )? 'web' : 'document';
@@ -61,14 +102,19 @@ angular
 
             $http.get('data/' + langKey + '.json').then(function(data){
 
-                var _b = ['jobs', 'edus', 'works'];
-                for (var b in _b){
-                    var _arr = data.data[_b[b]];
-                    for (var i in _arr) {
-                        _arr[i].begin = _arr[i].begin && new Date(_arr[i].begin);
-                        _arr[i].end = _arr[i].end && new Date(_arr[i].end);
+                $scope.recoursive(data,
+                  function (property, value, parent) {
+                    if(parent.when){
+                      parent.begin = parent.end = new Date(parent.when);
                     }
-                }
+                    if(parent.end){
+                      parent.end = new Date(parent.end);
+                    }
+                    if(parent.begin){
+                      parent.begin = new Date(parent.begin);
+                    }
+                  }
+                );
 
                 $scope.data = $.extend(true,$scope.data,data.data);
 

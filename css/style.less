@@ -1,3 +1,6 @@
+@import url(../../library-cdn/css/elements.less);
+
+
 @page {
   size: A4;
   margin: 0;
@@ -220,6 +223,7 @@ section {
   }
 
   main {
+    position: relative;
     padding: 20px 30px 20px 20px;
 
     .period {
@@ -248,6 +252,7 @@ section {
         display: block;
       }
       p {
+        white-space: pre-line;
         margin: 0;
       }
       > div:nth-child(2) {
@@ -681,4 +686,102 @@ button, select, html, textarea, input {
 .card-container {
 
   transform: rotate(-10deg) translate(50%, -50%);
+}
+
+.pre{
+  white-space: pre-line;
+}
+.hexagon {
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 11;
+  cursor: pointer;
+  list-style-type: none;
+  //width: 27.85714285714286%;
+  //padding-bottom: 32.16760145166612%;
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  width: 224px;
+  padding-bottom: 257px;
+
+  .transform(rotate(-60deg) skewY(30deg));
+
+  * {
+    position: absolute;
+    visibility: visible;
+  }
+
+  &:hover > div {
+    background-color: rgb(191, 229, 255);
+  }
+  > img {
+    .transition(all .5s);
+    background-color: rgb(178, 213, 237);
+    color: black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 2px solid white;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+    -webkit-backface-visibility: hidden;
+    margin-left: -2px;
+    display: block;
+    line-height: 56px;
+    &:after {
+      top: 0;
+      left: 0;
+      content: "";
+      border: 2px solid white;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      left: -50%;
+      margin: 0px -3.5px;
+      display: block;
+      z-index: 11;
+      position: absolute;
+      -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+      -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+      transform: translateX(50%) rotate(-60deg) skewY(30deg);
+      margin-left: -1px;
+      margin-top: -1px;
+    }
+  }
+
+}
+
+
+
+.aiesec {
+  header{
+    position: relative;
+    &:after{
+      content: "";
+      height: 1cm;
+      position: absolute;
+      bottom: 0.5cm;
+      width: 101%;
+      background-size: auto 1cm;
+      background-repeat: no-repeat;
+      left: 0;
+      background-color: #037ef3;
+    }
+  }
+  main{
+    &:after{
+      content: "";
+      height: 1cm;
+      position: absolute;
+      bottom: 0.5cm;
+      width: 100%;
+      background-image: url(../images/aiesec.png);
+      background-size: auto 1cm;
+      background-repeat: no-repeat;
+      left: 0;
+    }
+  }
 }

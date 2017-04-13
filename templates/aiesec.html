@@ -1,12 +1,67 @@
-<div class="modern layout layout-row"  ng-init="category='aiesec'">
-    <header class="flex flex-35"  ng-include="'templates/modern-sidebar.html'"></header>
-    <main class="flex">
-        <h1>{{'aiesec_expirience'|translate}}</h1>
-        <section expirience="data.aiesec"></section>
-        <section id="skills">
-            <h1>{{'strong'|translate}}</h1>
-            <p ng-repeat="row in data.aiesec_description" ng-bind-html="row"></p>
-        </section>
-    </main>
+<div class="modern layout layout-row aiesec" ng-init="category='aiesec'">
+
+  <header class="flex flex-35">
+
+
+    <div class="hexagon">
+      <img src="{{data.avatar}}">
+    </div>
+
+    <div>
+      <h1>{{data.name}}</h1>
+      <h2>{{data.title}}</h2>
+      <section>
+        <h3>{{'about'| translate}}</h3>
+        <a ng-repeat="info in data.info" ng-href="{{info.href}}">
+          <dt>
+            <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
+            {{info.dt}}<span ng-if="info.dt">:</span>
+          </dt>
+          <dd>{{info.value}}</dd>
+        </a>
+      </section>
+      <section>
+        <h3>{{'contacts'| translate}} </h3>
+        <a ng-repeat="info in data.contacts" ng-href="{{info.href}}" target="_blank" ng-show="show(info,category)">
+          <dt>
+            <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
+            {{info.dt}}
+          </dt>
+          <dd>{{info.value}}</dd>
+        </a>
+      </section>
+      <section>
+        <h3>{{'interests'| translate}}</h3>
+        <a ng-repeat="info in data.interests" ng-href="{{info.href}}">
+          <dt>
+            <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
+            {{info.dt}}
+          </dt>
+          <dd ng-bind="info.value"></dd>
+        </a>
+      </section>
+    </div>
+
+  </header>
+
+  <main class="flex">
+
+    <section>
+      <h1>{{'goal'|translate}}</h1>
+      <p ng-repeat="row in data.aiesec.goal" ng-bind-html="row"></p>
+    </section>
+
+    <h1>{{'expirience'|translate}}</h1>
+    <section expirience="data.aiesec.expirience"></section>
+
+    <h1>{{'training courses and conferences'}}</h1>
+    <section expirience="data.aiesec.courses"></section>
+
+    <section>
+      <h1>Languages</h1>
+      <p><b  class="flex flex-25">Russian</b> - native </p>
+      <p><b  class="flex flex-25">English</b> - fluent  </p>
+    </section>
+  </main>
 
 </div>
