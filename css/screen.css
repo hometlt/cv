@@ -1,0 +1,206 @@
+.lang {
+  z-index: 100;
+  position: fixed;
+  right: 20px;
+  top: 0;
+}
+.lang > i,
+.lang > a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background: #8BC88B;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 2px;
+  cursor: pointer;
+}
+.lang > i:hover span,
+.lang > a:hover span {
+  display: block;
+}
+.lang span {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  font-family: cursive;
+  color: black;
+  text-shadow: white 1px 1px 1px;
+  margin-right: 7px;
+}
+.lang span img {
+  width: 30px;
+}
+.lang #download,
+.lang #print {
+  background: #0e6dc8;
+}
+.lang #russian,
+.lang #english {
+  background-color: transparent;
+  background-size: 100%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.lang #english {
+  background-image: url(../icons/eng.png);
+}
+.lang #russian {
+  background-image: url(../icons/rus.png);
+}
+#preview-shadow {
+  display: table;
+  padding: 0;
+  position: fixed;
+  z-index: 111;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+#preview-shadow > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+#preview-shadow #preview-image {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+#preview-image {
+  width: auto;
+  height: auto;
+  max-width: 100% !important;
+  max-height: 90%;
+  border: 1px solid black;
+}
+.photo-container {
+  background-color: white;
+  box-shadow: 0 0 10px 0 black;
+  width: auto;
+  padding: 21px;
+  position: relative;
+  display: inline-block;
+  max-width: 90%;
+  color: black;
+  max-height: 90%;
+}
+#table {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/retina_wood.png);
+  background-color: #EBD5B8;
+  background-position: right;
+}
+#table #left-objects {
+  position: fixed;
+  left: 0;
+  text-align: right;
+  height: 100%;
+}
+#table #left-objects #pencil {
+  height: 30%;
+  top: 40%;
+  position: absolute;
+  right: 0;
+}
+#table #left-objects #notebook {
+  position: absolute;
+  transform: rotate(-10deg);
+  height: 60%;
+  right: 0;
+  top: 20%;
+}
+#table #left-objects #notebook:hover {
+  transform: rotate(-8deg);
+}
+#table #right-objects {
+  position: fixed;
+  right: 0;
+  text-align: right;
+  height: 100%;
+}
+#table #right-objects #coffee {
+  height: 20%;
+  position: relative;
+  top: -2%;
+}
+#table #right-objects #keyboard {
+  height: 40%;
+  top: 0%;
+  position: relative;
+  margin-left: 10%;
+  right: -10%;
+}
+.rotated {
+  -webkit-backface-visibility: hidden;
+  transform: rotate(0deg);
+  transform-origin: 100% 50%;
+  transition: transform 0.5s;
+}
+.rotated:hover {
+  transform: rotate(-3deg);
+}
+.document-view .old-look-document .container {
+  transform: translate(85%, 60%) rotate(-10deg) !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: 1px 1px 3px 0px;
+}
+.document-view article {
+  transform-origin: top left;
+  position: relative;
+  box-sizing: border-box;
+  height: 297mm;
+  width: 210mm;
+  overflow: hidden;
+}
+.document-view .container {
+  margin: 10px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px;
+  transform: translate(0, 0) rotate(0deg);
+  transition: transform 1s, top 1s, left 1s;
+}
+.document-view .container.back {
+  transform: translate(-3%, -101%) rotate(1deg);
+}
+.document-view .container.back:hover {
+  transform: translate(-4%, -101%) rotate(1deg);
+}
+.document-view .container#project {
+  height: 671px;
+  width: 950px;
+  position: fixed;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.document-view .container#project.ng-hide {
+  top: 110%;
+  transform: translate(-18%, 5%) rotate(4deg);
+  left: 110%;
+  display: block !important;
+}
+.document-view .container#project.ng-hide:hover {
+  transform: translate(-19%, 1%) rotate(5deg);
+}
+.document-view .container#project article {
+  height: 210mm;
+  width: 297mm;
+}
+.document-view #first {
+  z-index: 2;
+}
+.document-view #second {
+  z-index: 1;
+}

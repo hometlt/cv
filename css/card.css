@@ -1,0 +1,437 @@
+.card-container {
+  /* Primary Styles
+---------------------------------*/
+  /* Team
+    ---------------------------------*/
+  /* Contact
+    ---------------------------------*/
+  -webkit-perspective: 85mm;
+  -moz-perspective: 85mm;
+  -o-perspective: 85mm;
+  perspective: 85mm;
+  width: 85mm;
+  height: 55mm;
+  position: absolute;
+  top: 50%;
+  margin-top: -27.5mm;
+  left: 50%;
+  margin-left: -42.5mm;
+}
+.card-container h2 {
+  font-size: 34px;
+  color: #222222;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0 0 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.card-container h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #222222;
+  font-size: 16px;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.card-container h6 {
+  font-size: 16px;
+  color: #888888;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+.card-container p {
+  line-height: 24px;
+  margin: 0;
+}
+.card-container .team-leader-block {
+  max-width: 993px;
+  margin: 0 auto;
+}
+.card-container .team-leader-box {
+  width: 30.66%;
+  margin-right: 3.82979%;
+  height: 490px;
+  overflow: hidden;
+  text-align: center;
+  float: left;
+}
+.card-container .team-leader-box span {
+  margin-bottom: 24px;
+  display: block;
+}
+.card-container .team-leader-box:nth-of-type(3n+0) {
+  margin: 0;
+}
+.card-container .team-leader {
+  width: auto;
+  height: auto;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 1mm #7cc576;
+}
+.card-container .team-leader-shadow {
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 50%;
+}
+.card-container .team-leader-shadow a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.card-container .team-leader:hover .team-leader-shadow {
+  box-shadow: inset 0px 0px 0px 148px rgba(17, 17, 17, 0.8);
+}
+.card-container .team-leader:hover ul {
+  display: block;
+  opacity: 1;
+}
+.card-container .team-leader img {
+  display: block;
+  border-radius: 50%;
+}
+.card-container .team-leader ul {
+  display: block;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  margin-top: -14px;
+  z-index: 15;
+  transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+}
+.card-container .team-leader ul li {
+  display: inline;
+  margin: 0 11px;
+}
+.card-container .team-leader ul li a {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  font-size: 28px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+.card-container .team-leader ul li a:hover,
+.card-container .team-leader ul li a:focus {
+  text-decoration: none;
+}
+.card-container .team-leader ul li a.fa-twitter:hover {
+  color: #55acee;
+}
+.card-container .team-leader ul li a.fa-facebook:hover {
+  color: #3b5998;
+}
+.card-container .team-leader ul li a.fa-pinterest:hover {
+  color: #cb2026;
+}
+.card-container .team-leader ul li a.fa-google-plus:hover {
+  color: #dd4b39;
+}
+.card-container .contact-info-box {
+  font-size: 15px;
+  margin: 0 0 14px 68px;
+  padding-left: 0;
+}
+.card-container .contact-info-box h3 {
+  font-size: 15px;
+  font-weight: 400;
+  float: left;
+  width: 102px;
+  margin-right: 12px;
+  line-height: 28px;
+}
+.card-container .contact-info-box h3 i {
+  font-style: normal;
+  font-size: 18px;
+  color: #222222;
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  margin-right: 7px;
+}
+.card-container .contact-info-box span {
+  line-height: 28px;
+  display: block;
+  overflow: hidden;
+}
+.card-container .card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -o-transform-origin: right center;
+  transform-origin: right center;
+}
+.card-container .card figure {
+  overflow: hidden;
+  border: 1px solid grey;
+  margin: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5mm;
+}
+.card-container .card figure .bg {
+  z-index: 0;
+  position: absolute;
+  width: 60mm;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -29mm;
+  top: 9mm;
+  transform: rotate(30deg);
+  -webkit-clip-path: polygon(0 25%, 19% 14%, 53% 37%, 95% 28%, 100% 86%, 50% 75%, 0% 75%);
+}
+.card-container .card figure .content {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.card-container .card figure .bgcode {
+  opacity: 0.2;
+  color: #7cc576;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 4mm;
+  transform: rotate(-20deg) translate(-25mm, -8mm);
+  -webkit-animation: NAME-YOUR-ANIMATION 6s infinite;
+  /* Safari 4+ */
+  -moz-animation: NAME-YOUR-ANIMATION 6s infinite;
+  /* Fx 5+ */
+  -o-animation: NAME-YOUR-ANIMATION 6s infinite;
+  /* Opera 12+ */
+  animation: NAME-YOUR-ANIMATION 6s infinite;
+  /* IE 10+, Fx 29+ */
+}
+.card-container .card figure .gradient {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.8) 0%, rgba(125, 185, 232, 0) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.8) 0%, rgba(125, 185, 232, 0) 100%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(125, 185, 232, 0) 100%);
+}
+.card-container .card figure .gradient2 {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(-45deg, #ffffff 50%, rgba(125, 185, 232, 0) 100%);
+  background: -webkit-linear-gradient(-45deg, #ffffff 50%, rgba(125, 185, 232, 0) 100%);
+  background: linear-gradient(135deg, #ffffff 50%, rgba(125, 185, 232, 0) 100%);
+}
+.card-container .card figure h2 {
+  color: white;
+  font-size: 3.6mm;
+  line-height: 4.1mm;
+  margin: 39.5mm 0 6px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  text-transform: none;
+  text-align: center;
+  font-weight: bold;
+}
+.card-container .card figure .team-leader {
+  margin: 1mm 1.5mm 1mm 1mm;
+  float: left;
+}
+.card-container .card figure .contact-info-box {
+  margin: 2mm 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.card-container .card figure .contact-info-box a {
+  font-size: 4mm;
+  line-height: 4mm;
+  width: auto;
+  float: none;
+  margin: 2mm -3mm;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+.card-container .card figure .contact-info-box a i {
+  font-size: 3.2mm;
+}
+.card-container .card figure .fa {
+  width: 3.2mm;
+  margin-right: 2mm;
+  text-align: center;
+}
+.card-container .card figure .avatar {
+  width: 29.3mm;
+  height: 29.3mm;
+  background: url(../images/rio.png);
+  background-size: 150%;
+  border-radius: 50%;
+  background-position: 50% 30%;
+}
+.card-container .card figure blockquote {
+  text-align: center;
+  font-size: 3.8mm;
+  font-style: italic;
+  margin: 4mm 3mm;
+  color: grey;
+}
+.card-container .card figure hr {
+  margin: 0 3.1mm;
+}
+.card-container .card figure .logo {
+  -webkit-animation: BRIGHT 10s infinite;
+  /* Safari 4+ */
+  width: 25mm;
+  position: absolute;
+  top: 4mm;
+  left: 50%;
+  margin-left: -12.5mm;
+}
+.card-container .card figure.front {
+  z-index: 1;
+  color: white;
+  background: black url(http://codershere.likesyou.org/img/pw_maze_black_2X.png) left top repeat;
+}
+.card-container .card figure.front a {
+  font-size: 3mm;
+  text-align: center;
+  display: block;
+  padding: 0;
+  text-decoration: none;
+  color: #7cc576;
+}
+.card-container .card figure.back {
+  z-index: 1;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: white url(../images/cubes.png);
+  color: black;
+}
+.card-container .card figure.back .content {
+  text-align: left;
+  padding: 3mm;
+  box-sizing: border-box;
+}
+.card-container .card figure.back .content .left {
+  float: left;
+}
+.card-container .card figure.back .content .right {
+  float: left;
+  width: 46.5mm;
+}
+.card-container .card figure.back h3 {
+  text-align: center;
+  font-size: 4.5mm;
+}
+.card-container .card figure.back h4 {
+  text-align: center;
+  font-size: 3.3mm;
+  margin: 1mm 0;
+  font-weight: normal;
+}
+.card-container.animated .card {
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+}
+.card-container.turn-right .card {
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.card-container.flipped .card {
+  -webkit-transform: translateX(-100%) rotateY(-180deg);
+  -moz-transform: translateX(-100%) rotateY(-180deg);
+  -o-transform: translateX(-100%) rotateY(-180deg);
+  transform: translateX(-100%) rotateY(-180deg);
+}
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-moz-keyframes NAME-YOUR-ANIMATION {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-o-keyframes NAME-YOUR-ANIMATION {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes NAME-YOUR-ANIMATION {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframes BRIGHT {
+  0% {
+    -webkit-filter: brightness(1);
+  }
+  90% {
+    -webkit-filter: brightness(1);
+  }
+  95% {
+    -webkit-filter: brightness(4);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+  }
+}
