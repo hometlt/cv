@@ -3,8 +3,8 @@
   "title": "Фронтенд ВЕБ Программист",
   "blockquote": "Любим решать задачи,<br/>с которыми <br/>не справляются другие!",
   "moto": "Мы не просто пьем кофе,<br> мы в этом профессионалы!",
-  "avatar": "images/O6bjjWTJf4Q.jpg",
-  "prompt": "Фронтенд разработчик и программист с 4-хлетним опытом работы.  Имею опыт разработки вебсайтов и html5 приложений, десктопных и мобильных приложений с использованием C++/Qt, Java/swing  и Android development Kit",
+  "avatar": "images/cam.jpg",
+  "prompt": "Фронтенд разработчик и программист с 4-хлетним опытом работы.  Имею опыт разработки вебсайтов и html5 приложений, десктопных и мобильных приложений с использованием C++/Qt, Java/swing",
 
   "strong_description": [
     "2 года разработки с использованием HTML5 технологий, таких как SVG, Canvas, web workers. JavaScript, JQuery, ajax.",
@@ -20,7 +20,7 @@
     },
     "birth": {
       "dt": "Дата рождения",
-      "value": "9 Янв 1991 (24 года)"
+      "value": "9.01.1991(27лет)"
     },
     "marital": {
       "dt": "Семейное положение",
@@ -54,7 +54,7 @@
       "job_description": "Работал с AngularJS над приложениями для Megafon, Canon, Pepsico и других"
     },
     "gamesinedu": {
-      "city": "Москва",
+      "city": "Тольятти",
       "title": "Фронтенд программист",
       "company_description": "Clients include:  Skolkovo Moscow School of Management,  Rosatom Nuclear Energy State Corporation,  Russian Presidential Academy of National Economy and Public Administration",
       "job_description": "В мои обязанности входила, доработка игровых моделей бизнес-игр,  верстка и разработка интерактивных карт и элементов дизайна, разработка web-приложений"
@@ -71,7 +71,7 @@
       "company_description": "KC works under its mission – to provide international customers by hi-tech products for electrical installations.",
       "job_description": "Разработка  Fix Combitech 2."
     },
-    "polad": {
+    "polad2": {
       "company": "ЗАО «ПОЛАД»",
       "city": "Тольятти",
       "title": "Системный администратор",
@@ -104,6 +104,31 @@
   },
 
   "works": {
+    "microwork": {
+      "title": "Утилита ",
+      "company": "UpWork",
+      "client": "Microwork",
+      "description": "Includes Magic wand/brush/lasso/linear lasso/square/circle, and other selection tools",
+      "href": "//www.microwork.io",
+      "href_title": "microwork.io",
+      "begin": "1 Feb 2016",
+      "end": "31 Apr 2016",
+      "images_full": ["microwork.1.png","microwork.2.png","microwork.3.png"],
+      "images": [{"url": "microwork.1.png" , "description":"Logotypes seletion"}, {"url": "microwork.3.png" , "description":"Mask editor tools"}]
+    },
+    "stitchcount": {
+      "manager": "Brad Matters",
+      "title": "Product customizer tool",
+      "company": "UpWork",
+      "client": "StitchCounts",
+      "description": "Product editor. Includes bezier shapes, editable curved text, curved images, image editor tool etc.",
+      "href": "//www.stitchcounts.com/",
+      "href_title": "stitchcounts.com",
+      "begin": "1 Mar 2016",
+      "end": "31 May 2016",
+      "images_full": ["stitchcount.1.png","stitchcount.2.png"],
+      "images": [{"url": "stitchcount.1.png" , "description":"Curved text/images"}, {"url": "stitchcount.2.png" , "description":"image editor"}]
+    },
     "rosatom": {
       "title": "Управление в ядерной энергетике",
       "company": "ГК РосАтом",

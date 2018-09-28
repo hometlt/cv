@@ -273,7 +273,6 @@ angular
 
                 createPage();
 
-
                 $http.get(attrs.page, {
                     cache: $templateCache
                 }).then(function(result) {

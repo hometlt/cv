@@ -1,5 +1,4 @@
-@import url(../../library-cdn/css/elements.less);
-
+@import url(../css/elements.less);
 
 @page {
   size: A4;
@@ -12,6 +11,8 @@ html, body {
   transform-origin: top;
   height: 100%;
 }
+
+
 
 .fade {
   opacity: 0;
@@ -107,7 +108,7 @@ body {
     width: auto;
     margin-top: 0;
     overflow: hidden;
-    h1 {
+    h2 {
       text-align: left;
       margin: -3.5mm 0mm;
     }
@@ -138,12 +139,12 @@ section {
     margin: 10px 0;
     text-indent: 15px;
   }
-  h1 {
+  h2 {
 
     font-size: 26px;
     margin: 0;
   }
-  h2 {
+  h3 {
     margin: 10px 0px;
   }
 
@@ -210,7 +211,7 @@ section {
   font-size: 11pt;
   height: 100%;
 
-  h1 {
+  h2 {
     text-align: left;
     color: #00BF67;
     position: relative;
@@ -234,7 +235,7 @@ section {
       display: inline-block;
     }
 
-    h2 {
+    h3 {
       font-size: 15px;
       margin: 0;
       a {
@@ -430,6 +431,7 @@ section {
     }
   }
 
+
   header {
 
     width: 10mm;
@@ -437,18 +439,43 @@ section {
     background-image: url(../images/cubes.png) !important;
     padding: 5mm !important;
 
+
+    &.rotated{
+      width: 10mm !important;
+      padding: 0mm !important;
+      > div {
+
+        white-space: nowrap;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        width: 10mm;
+        height: 10mm;
+        left: 0;
+        h2 {
+          transform: rotate(-90deg);
+        }
+        span {
+
+          color: black;
+          font-size: 0.8em;
+        }
+      }
+    }
+
+
     .avatar {
 
       margin: auto;
       display: block;
     }
-    h1 {
+    h2 {
       text-align: center;
       font-size: 22px;
       margin-bottom: 0;
       margin-top: 0;
     }
-    h2 {
+    h3 {
       text-align: center;
       font-size: 15px;
       margin-top: 0;
@@ -464,8 +491,8 @@ section {
     }
     dt {
       float: left;
+      line-height: 20px;
       font-weight: 600;
-      padding-right: 3px;
       padding-right: 3px;
 
       i.fa {
@@ -495,13 +522,15 @@ section {
      }
     }
     dd {
+
       text-align: left;
       -webkit-margin-start: 30px;
-      min-height: 20px;
+      min-height: 17px;
       margin-bottom: 5px;
+      padding-top: 2px;
     }
 
-    h3 {
+    h4 {
       text-align: center;
       position: relative;
       &:before, &:after {
@@ -536,37 +565,15 @@ section {
     }
   }
 
+
   &#portfolio {
     .icons-small {
       right: 20px;
       top: 0;
     }
-    h2 {
+    h3 {
       font-size: 18px;
       margin: 0; //10px 0 4px;
-    }
-
-    header {
-      width: 10mm !important;
-      padding: 0mm !important;
-      > .rotated {
-
-        white-space: nowrap;
-        margin: 0;
-        position: absolute;
-        bottom: 0;
-        width: 10mm;
-        height: 10mm;
-        left: 0;
-        h1 {
-          transform: rotate(-90deg);
-        }
-        span {
-
-          color: black;
-          font-size: 0.8em;
-        }
-      }
     }
 
     .work {
@@ -581,7 +588,7 @@ section {
         display: block;
         padding-bottom: 3px;
       }
-      h3 {
+      h4 {
         margin: 0;
         font-size: 14px;
         margin-top: -4px;
@@ -645,14 +652,19 @@ button, select, html, textarea, input {
   flex: 0 0 70%;
 }
 
+.flex-30 {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+}
 .flex-35 {
-  -webkit-flex: 0 0 33%;
-  -ms-flex: 0 0 33%;
-  flex: 0 0 33%;
+  -webkit-flex: 0 0 35%;
+  -ms-flex: 0 0 35%;
+  flex: 0 0 35%;
 }
 
 .layout-row > .flex-35 {
-  max-width: 33%;
+  max-width: 35%;
 }
 
 .flex-25 {
@@ -660,7 +672,6 @@ button, select, html, textarea, input {
   -ms-flex: 0 0 28%;
   flex: 0 0 28%;
 }
-
 .layout-row > .flex-28 {
   max-width: 28%;
 }

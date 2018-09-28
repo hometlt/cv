@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/screen.css" media="screen">
     <link rel="stylesheet" href="css/print.css" media="print">
     <!--<link rel="stylesheet" href="css/card.css" media="screen">-->
-
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
@@ -26,8 +25,8 @@
     <div class="lang">
         <a href="dist/den.ponomarev.en.pdf" id="download" class="fa fa-file-pdf-o"></a>
         <i id="print" class="fa fa-print"     ng-click="print()" ></i>
-        <i id="view" class="fa fa-binoculars" ng-click="changeView()" ></i>
-        <i id="style" class="fa fa-diamond" ng-click="changeStyle()" ></i>
+        <!--<i id="view" class="fa fa-binoculars" ng-click="changeView()" ></i>-->
+        <!--<i id="style" class="fa fa-diamond" ng-click="changeStyle()" ></i>-->
         <a href="#" ng-if="lang == 'ru_RU'"   ng-click="setLang('en_US')" id="english">
             <span>Change Language<img src="images/arrow.svg"></span>
         </a>
@@ -58,13 +57,14 @@
 
     <div ng-class="{'old-look-document' : style == 'oldschool'}"  ng-click="changeStyle('modern')">
         <div page='templates/modern.html' id="first"></div>
-        <div page='templates/aiesec.html' id="first"></div>
-        <div page='templates/modern-portfolio.html' id="second"></div>
+        <div page='templates/modern-2.html' id="second"></div>
+        <!--<div page='templates/aiesec.html' id="first"></div>-->
+        <div page='templates/modern-portfolio.html' id="third"></div>
     </div>
-    <div ng-class="{'old-look-document' : style == 'modern'}" ng-click="changeStyle('oldschool')">
-        <div page='templates/old.html' class='old'></div>
-        <div page='templates/old-portfolio.html' rearrange class='old'></div>
-    </div>
+    <!--<div ng-class="{'old-look-document' : style == 'modern'}" ng-click="changeStyle('oldschool')">-->
+        <!--<div page='templates/old.html' class='old'></div>-->
+        <!--<div page='templates/old-portfolio.html' rearrange class='old'></div>-->
+    <!--</div>-->
     <div page='templates/modern-project.html' horizontal class='rotated' id="project" ng-show="showProject"></div>
 
 

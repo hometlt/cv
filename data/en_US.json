@@ -89,8 +89,8 @@
         "dt": "Adress"
       },
       "birth": {
-        "dt": "Birth Date",
-        "value": "9 Jan 1991 (25 years)"
+        "dt": "Birth date",
+        "value": "9 Jan 1991 (27 years)"
       },
       "marital": {
         "hide": true,
@@ -112,6 +112,7 @@
     },
     "interests": {
       "travel": {
+        "hide": true,
         "icon": "fa-plane",
         "value": "Travelling is my passion, opporunity to travel is always a good point for me"
       },
@@ -154,7 +155,7 @@
       "home": {
         "hide": true,
         "title":  "Home Phone",
-        "value":	"+7(8482)350-950"
+        "value":  "+7(8482)350-950"
       },
       "icq": {
         "hide": true,
@@ -182,6 +183,14 @@
         "value": "+7-927-020-3657",
         "href": "tel:+79270203657"
       },
+      "phone": {
+        "hide": true,
+        "card": true,
+        "icon": "fa-whatsapp",
+        "title": "whatsapp",
+        "value": "+7-90-55-360-360",
+        "href": "tel:+79055360360"
+      },
       "vk": {
         "icon": "fa-vk",
         "title": "vk",
@@ -195,6 +204,7 @@
         "href": "//fb.com/hometlt"
       },
       "github": {
+        "hide": true,
         "category": "web",
         "icon": "fa-github-square",
         "title": "github",
@@ -210,9 +220,9 @@
       "upwork": {
         "category": "web",
         "icon": "icon-upwork",
-        "title": "whatsapp",
-        "value": "UpWork: Denis Ponomarev",
-        "href": "//goo.gl/Bx1s6O"
+        "title": "Upwork",
+        "value": "upwork.com/fl/denisponomarev",
+        "href": "//upwork.com/fl/denisponomarev"
       }
     },
     "jobs": {
@@ -221,9 +231,31 @@
         "company": "UpWork",
         "href": "//goo.gl/Bx1s6O",
         "href_title": "upwork.com",
-        "title": "Web Frontend Programmer (Freelancer)",
-        "job_description": "HTML5 applications based on AngularJS/ NodeJS stack.",
-        "skills": ["angular", "html5", "css3", "canvas", "nodejs"]
+        "city": "Freelance",
+        "title": "Web Frontend Programmer",
+        "job_description": "Разработка сервиса для оптимизации логистических расходов для медицинских учреждений Нидерландов, Бельгии и Германии. Angular/NodeJS",
+        "skills": ["angular", "html5", "css3", "canvas", "nodejs"],
+        "awards": [
+          "Built an ecommerce webapp to sell products online. Increased company sales by 58%.",
+          "Designed a customer web form for a local dentist's office. Increased patient satisfaction scores by 30%.",
+          "Developed a launch website for the Indie Documentary Jogging the Amazon. Boosted streaming sales by 60%.",
+          "Created a website and Facebook-linked donations webapp for a local animal shelter. Raised donations by 38%. Saved the lives of 15 dogs."
+        ]
+      },
+      "logex": {
+        "begin": "1 Nov 2016",
+        "end": "1 Nov 2017",
+        "company": "Logex",
+        "city": "Amsterdam",
+        "href": "//wwww.logex.nl",
+        "href_title": "logex.nl",
+        "title": "Web Frontend Programmer",
+        "job_description": "HTML5 applications based on AngularJS/ C# stack.",
+        "skills": ["angular", "html5", "css3", "canvas", "nodejs"],
+        "awards": [
+          "Full stack web developer responsible for end-to-end web app development.",
+          "rewrote old application to Angular4. Optimiized speed of the web application"
+        ]
       },
       "inteduca": {
         "begin": "1 Jan 2014",
@@ -241,19 +273,20 @@
         "begin": "1 Feb 2012",
         "end": "1 Aug 2013",
         "company": "GamesInEdu",
-        "city": "Moscow",
+        "city": "Togliatty",
         "href": "//gamesinedu.rane.ru",
         "href_title": "gamesinedu.rane.ru",
         "title": "Web Frontend Programmer",
         "company_description": "Clients include:  Skolkovo Moscow School of Management,  Rosatom Nuclear Energy State Corporation,  Russian Presidential Academy of National Economy and Public Administration",
-        "job_description": "Created larger part of UI of web based educational simulators for Russian government structures and universities",
-        "skills": ["svg", "canvas", "php"]
+        "job_description": "Created large part of UI of web based educational simulators for Russian government structures and universities",
+        "skills": ["html", "php"]
       },
       "brightstudio": {
         "begin": "1 Sep 2011",
         "end": "1 Dec 2011",
         "company": "Bright Studio",
         "city": "Togliatty",
+        "hide": true,
         "href_title": "brightstudio.ru",
         "href": "//www.brightstudio.ru",
         "title": "Web Programmer",
@@ -269,9 +302,9 @@
         "href_title": "dkc.ru",
         "href": "//www.dkc.ru",
         "title": "Qt/C++ Software Developer",
-        "company_description": "KC works under its mission – to provide international customers by hi-tech products for electrical installations.",
+        "company_description": "DKC works under its mission – to provide international customers by hi-tech products for electrical installations.",
         "job_description": "I Developed Fix Combitech 2 software using Qt/C++ and MySQL/SQLite.",
-        "skills": ["qt", "mysql"]
+        "skills": ["Qt", "C++", "MySQL", "SQLite"]
       },
       "polad2": {
         "begin": "1 Jun 2009",

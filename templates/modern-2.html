@@ -1,0 +1,15 @@
+<div class="modern layout layout-row">
+
+    <header class="rotated" ng-click="sendToFront()" style="cursor: pointer">
+        <div>
+            <h2>{{data.name}}<span>/ {{'work_expirience'|translate}}</span></h2>
+        </div>
+    </header>
+
+    <main class="flex">
+        <h2>{{'work_expirience'|translate}}</h2>
+        <section expirience="data.jobs"></section>
+        <h2>{{'education'|translate}}</h2>
+        <section expirience="data.edus"></section>
+    </main>
+</div>

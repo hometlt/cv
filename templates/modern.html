@@ -1,12 +1,56 @@
 <div class="modern layout layout-row" ng-init="category='web'">
 
-    <header class="flex flex-35"  ng-include="'templates/modern-sidebar.html'"></header>
+    <header class="flex flex-35">
+        <svg class="avatar" width="180" height="200" viewBox="0 0 560 645" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <clipPath id="hexagonal-mask">
+                <polygon points="270,0 0,160 0,485 270,645 560,485 560,160"/>
+            </clipPath>
+            <image clip-path="url(#hexagonal-mask)" height="100%" width="100%" xlink:href="{{data.avatar}}"/>
+        </svg>
+
+        <div>
+
+            <section>
+                <h4>{{'about'| translate}}</h4>
+                <a ng-repeat="info in data.info" ng-href="{{info.href}}">
+                    <dt>
+                        <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
+                        {{info.dt}}<span ng-if="info.dt">:</span>
+                    </dt>
+                    <dd>{{info.value}}</dd>
+                </a>
+            </section>
+            <section>
+                <h4>{{'contacts'| translate}} </h4>
+                <a ng-repeat="info in data.contacts" ng-href="{{info.href}}" target="_blank" ng-show="show(info,category)">
+                    <dt>
+                        <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
+                        {{info.dt}}
+                    </dt>
+                    <dd>{{info.value}}</dd>
+                </a>
+            </section>
+            <section>
+                <h4>{{'interests'| translate}}</h4>
+                <a ng-repeat="info in data.interests" ng-href="{{info.href}}">
+                    <dt>
+                        <i ng-if="info.icon" class="fa {{info.icon}}" title="{{info.title}}"></i>
+                        {{info.dt}}
+                    </dt>
+                    <dd ng-bind="info.value"></dd>
+                </a>
+            </section>
+        </div>
+    </header>
+
     <main class="flex">
-        <h1>{{'work_expirience'|translate}}</h1>
-        <section expirience="data.jobs"></section>
-        <h1>{{'education'|translate}}</h1>
-        <section expirience="data.edus"></section>
-        <h1>{{'strong'|translate}}</h1>
+        <section>
+            <h2>{{data.name}}</h2>
+            <h3>{{data.title}}</h3>
+            <p>{{data.prompt}}</p>
+        </section>
+
+        <h2>{{'strong'|translate}}</h2>
         <section id="skills">
             <div class="icons">
                     <span ng-repeat="skill in data.strong">
@@ -15,7 +59,7 @@
                     </span>
             </div>
             <p ng-repeat="row in data.strong_description" ng-bind-html="row"></p>
-            <h1>{{'weak'|translate}}</h1>
+            <h2>{{'weak'|translate}}</h2>
             <div class="icons">
                     <span ng-repeat="skill in data.weak">
                         <i class="fa {{skill.icon}}"></i>

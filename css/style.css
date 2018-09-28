@@ -17,8 +17,8 @@ body {
 }
 .fade {
   opacity: 0;
-  -webkit-transition: opacity .15s linear;
-  -o-transition: opacity .15s linear;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 .fade.in {
@@ -90,7 +90,7 @@ body {
 #project header .fa-times:hover {
   color: #00BF67;
 }
-#project header h1 {
+#project header h2 {
   text-align: left;
   margin: -3.5mm 0mm;
 }
@@ -113,11 +113,11 @@ section {
   margin: 10px 0;
   text-indent: 15px;
 }
-.old h1 {
+.old h2 {
   font-size: 26px;
   margin: 0;
 }
-.old h2 {
+.old h3 {
   margin: 10px 0px;
 }
 .old a {
@@ -172,7 +172,7 @@ section {
   margin-top: 0.7em;
   margin-bottom: 0.7em;
 }
-.modern h1 {
+.modern h2 {
   text-align: left;
   color: #00BF67;
   position: relative;
@@ -193,11 +193,11 @@ section {
   margin-top: 4px;
   display: inline-block;
 }
-.modern main h2 {
+.modern main h3 {
   font-size: 15px;
   margin: 0;
 }
-.modern main h2 a {
+.modern main h3 a {
   font-size: 15px;
   color: #000;
 }
@@ -385,17 +385,37 @@ section {
   background-image: url(../images/cubes.png) !important;
   padding: 5mm !important;
 }
+.modern header.rotated {
+  width: 10mm !important;
+  padding: 0mm !important;
+}
+.modern header.rotated > div {
+  white-space: nowrap;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 10mm;
+  height: 10mm;
+  left: 0;
+}
+.modern header.rotated > div h2 {
+  transform: rotate(-90deg);
+}
+.modern header.rotated > div span {
+  color: black;
+  font-size: 0.8em;
+}
 .modern header .avatar {
   margin: auto;
   display: block;
 }
-.modern header h1 {
+.modern header h2 {
   text-align: center;
   font-size: 22px;
   margin-bottom: 0;
   margin-top: 0;
 }
-.modern header h2 {
+.modern header h3 {
   text-align: center;
   font-size: 15px;
   margin-top: 0;
@@ -410,6 +430,7 @@ section {
 }
 .modern header dt {
   float: left;
+  line-height: 20px;
   font-weight: 600;
   padding-right: 3px;
 }
@@ -441,15 +462,16 @@ section {
 .modern header dd {
   text-align: left;
   -webkit-margin-start: 30px;
-  min-height: 20px;
+  min-height: 17px;
   margin-bottom: 5px;
+  padding-top: 2px;
 }
-.modern header h3 {
+.modern header h4 {
   text-align: center;
   position: relative;
 }
-.modern header h3:before,
-.modern header h3:after {
+.modern header h4:before,
+.modern header h4:after {
   content: "";
   height: 1px;
   background-color: grey;
@@ -458,10 +480,10 @@ section {
   margin-top: -1px;
   top: 50%;
 }
-.modern header h3:before {
+.modern header h4:before {
   left: 0;
 }
-.modern header h3:after {
+.modern header h4:after {
   right: 0;
 }
 .modern .notice {
@@ -479,29 +501,9 @@ section {
   right: 20px;
   top: 0;
 }
-.modern#portfolio h2 {
+.modern#portfolio h3 {
   font-size: 18px;
   margin: 0;
-}
-.modern#portfolio header {
-  width: 10mm !important;
-  padding: 0mm !important;
-}
-.modern#portfolio header > .rotated {
-  white-space: nowrap;
-  margin: 0;
-  position: absolute;
-  bottom: 0;
-  width: 10mm;
-  height: 10mm;
-  left: 0;
-}
-.modern#portfolio header > .rotated h1 {
-  transform: rotate(-90deg);
-}
-.modern#portfolio header > .rotated span {
-  color: black;
-  font-size: 0.8em;
 }
 .modern#portfolio .work {
   padding: 0 5px 10px 0;
@@ -513,7 +515,7 @@ section {
   display: block;
   padding-bottom: 3px;
 }
-.modern#portfolio .work h3 {
+.modern#portfolio .work h4 {
   margin: 0;
   font-size: 14px;
   margin-top: -4px;
@@ -569,13 +571,18 @@ input {
   -ms-flex: 0 0 70%;
   flex: 0 0 70%;
 }
+.flex-30 {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+}
 .flex-35 {
-  -webkit-flex: 0 0 33%;
-  -ms-flex: 0 0 33%;
-  flex: 0 0 33%;
+  -webkit-flex: 0 0 35%;
+  -ms-flex: 0 0 35%;
+  flex: 0 0 35%;
 }
 .layout-row > .flex-35 {
-  max-width: 33%;
+  max-width: 35%;
 }
 .flex-25 {
   -webkit-flex: 0 0 28%;
